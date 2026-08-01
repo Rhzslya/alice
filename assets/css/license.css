@@ -1,0 +1,119 @@
+body{
+	background-color: #191919
+}
+
+@font-face{
+	font-family: CGFontB;
+	src: url('../font/Century Gothic Bold.ttf');
+}
+
+@font-face{
+	font-family: CGFont;
+	src: url('../font/Century Gothic.ttf');
+}
+
+
+.wrapper-license{
+	width: 400px;
+	height: 490px;
+	background-color: #fff;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	box-shadow: 0px 0px 10px #000;
+}
+
+.license-header{
+	width: 400px;
+	height: 40px;
+	background-color: #86000a;
+	float: left;
+	color: #fff;
+	font-family: CGFontB;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	border-top-right-radius: 3px ;
+	border-top-left-radius: 3px;
+}
+
+.license-icon{
+	width: 400px;
+	height: 250px;
+	float: left;
+	background: url('../image/license-img.png')no-repeat;
+	background-size: 180px;
+	background-position: center center;
+	border-bottom: 1px solid #dadada
+}
+
+.license-form{
+	width: 400px;
+	height: 210px;
+	float: left;
+	/*background-color: red*/
+}
+
+.license-warning{
+	width: auto;
+	font-family: CGFont;
+	color: #ef1010;
+	/*background-color: #222;*/
+	padding: 3px;
+	float: left;
+	font-size: 12px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 3px;
+	margin-left: 15px;
+	margin-top: 10px
+}
+
+table{
+	font-family: CGFont;
+	font-size: 13px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px
+}
+
+table td{
+	line-height: 30px
+}
+
+
+table td input[type="text"]{
+	border: 1px solid #dadada;
+	padding: 3px;
+	box-shadow: 0px 0px 5px #ef1010;
+
+}
+
+input[type="submit"]{
+	background-color: #007cbc;
+	width: 360px;
+	height: 40px;
+	cursor: pointer;
+	color: #fff;
+	font-family: CGFontB;
+	border: 0px;
+	border-radius: 3px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+input[type=submit]:hover{
+	background-color: #006092
+}
+
+.the-key{
+	color: #ef1010;
+	font-family: CGFontB;
+	font-size: 16px;
+}

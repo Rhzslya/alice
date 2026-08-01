@@ -1,0 +1,149 @@
+.result-pane{
+	width: 898px;
+	height: 311px;	
+	border: 1px solid #1f1f1f;
+	margin-top: 75px;
+	margin-left: 64px;
+	box-shadow: 0px 0px 7px #4e4e4e;
+}
+
+.result-score{
+	width: 450px;
+	height: 311px;
+	background-color: #fff;
+	float: left;
+}
+
+.result-score h3{
+	font-family: CGFontB;
+	font-weight: normal;
+	font-size: 22px;
+	color: #323232;
+	text-transform: uppercase;
+	margin-left: 25px;
+}
+
+.result-donut{
+	width: 165px;
+	height: 165px;
+	border: 1px solid green;
+	border-radius: 85px;
+	float: left;
+	margin-left: 34px;
+	margin-top: 7px;
+}
+
+.result-detail{
+	width: 230px;
+	height: 160px;
+	float: left;
+	margin-top: 20px;
+	margin-left: -8px;
+}
+
+.resdet-each{
+	width: 230px;
+	height: 48px;
+	margin-bottom: 7px;
+}
+
+.resdet-line{
+	border: 0;
+	width: 56px;
+	height: 1px;
+	background-color: #838383;
+	float: left;
+	margin-top: 15px;
+}
+
+.resdet-icon{
+	width: 25px;
+	height: 25px;
+	background-color: blue;
+	float: left;
+	margin-left: 8px;
+	margin-top: 3px;
+}
+
+.resdet-value{
+	font-family: arial;
+	font-weight: bold;
+	font-size: 20pt;
+	float: left;
+	margin-left: 12px;
+}
+
+.resdet-label{
+	font-family: arial;
+	font-weight: bold;
+	font-size: 10.5pt;
+	float: left;
+	margin-left: 102px;
+	margin-top: -3px;
+	color: #696969;
+}
+
+#icon-question{
+	background: url('../../assets/image/ico-result-question.png') no-repeat;
+}
+
+#icon-correct{
+	background: url('../../assets/image/ico-result-correct.png') no-repeat;
+}
+
+#icon-wrong{
+	background: url('../../assets/image/ico-result-wrong.png') no-repeat;
+}
+
+
+#value-question{
+	color: #0259a2;
+}
+
+#value-correct{
+	color: #529f20;
+}
+
+#value-wrong{
+	color: #d30000;
+}
+
+.result-attempt-info{
+	width: 448px;
+	height: 311px;
+	background-color: #1f1f1f;
+	float: left;
+}
+
+.result-attempt-info h3{
+	font-family: CGFontB;
+	font-weight: normal;
+	font-size: 22px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-left: 28px;
+}
+
+.resatt-pane{
+	width: 348px;
+	height: 205px;
+	margin-left: 28px;
+}
+
+.resatt-pane h4{
+	margin: 0;
+	font-family: CGFont;
+	font-weight: normal;
+	font-size: 10.5pt;
+	text-transform: uppercase;
+	color: #828282;
+}
+
+.resatt-value{
+	font-family: arial;
+	font-weight: normal;
+	font-size: 13.5pt;	
+	color: #ff9d12;
+	margin-top: -2px;
+	margin-bottom: 12px;
+}

@@ -1,0 +1,97 @@
+#page-blocker{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.7;
+	display: none;
+}
+
+.pop-up-form{
+	width: 200px;
+	height: 200px;
+	background-color: #EDEDED;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+	border-radius: 5px;
+	border: 1px solid #C9C9C9;
+	box-shadow: 0px 0px 10px #4C4C4C;
+	padding-bottom: 10px;
+	display: none;
+}
+.pop-up-form-add{
+	width: 200px;
+	height: 200px;
+	background-color: #EDEDED;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+	border-radius: 5px;
+	border: 1px solid #C9C9C9;
+	box-shadow: 0px 0px 10px #4C4C4C;
+	padding-bottom: 10px;
+	display: none;
+}
+.pop-up-form-add .title{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;	
+}
+
+.pop-up-form-add .content{
+	width: 85%;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.pop-up-form-add .button{
+	margin-top: 25px;
+	text-align: center;
+}
+
+.pop-up-form-pack{
+	width: 200px;
+	height: 200px;
+	background-color: #EDEDED;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+	border-radius: 5px;
+	border: 1px solid #C9C9C9;
+	box-shadow: 0px 0px 10px #4C4C4C;
+	padding-bottom: 10px;
+	display: none;
+}
+.pop-up-form-pack .title{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;	
+}
+
+.pop-up-form-pack .content{
+	width: 85%;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.pop-up-form-pack .button{
+	margin-top: 25px;
+	text-align: center;
+}

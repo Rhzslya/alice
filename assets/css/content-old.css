@@ -1,0 +1,82 @@
+/* BEGIN of TAB */
+.list-tabs a{
+    font-family: CGFont;
+    font-size: 10pt;
+    color: #7f8c8d;
+    border-bottom: 2px solid #7f8c8d;
+    margin-right: 6px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 32px;
+}
+
+.list-tabs a:hover, .list-tabs .tab-current{
+    color: #FF7C07;
+    border-color: #FF7C07;
+}
+
+
+/* BEGIN of TOTAL LIST */
+.total-pane{
+    width: 153px;
+    height: 20px;
+    border-bottom: 1px solid #393939;
+    margin-top: 15px;
+    /*margin-left: 600px;*/
+}
+
+.total-label-total{
+    width: 40px;
+    color: #393939;
+    text-transform: uppercase;
+    font-family: CGFontBold;
+    font-size: 10pt;
+    float: left;
+    margin-left: 8px;
+}
+
+.total-value{
+    width: 33px;
+    color: #E69138;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-left: 8px;
+    margin-right: 5px;
+    float: left;
+    text-align: right;
+}
+
+.total-label-unit{
+    width: 54;
+    color: #393939;
+    font-family: CGFont;
+    font-size: 9pt;
+    float: left;
+    margin-left: 5px;
+}
+/* END of TOTAL LIST */
+
+
+/* END of TAB */
+
+/* BEGIN Of loading animation */
+    .loading-modal {
+        background: url('../image/loading.gif') 30% 30% no-repeat;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        /*display: none;*/
+        z-index: 700;
+    }
+
+    .loading {
+        overflow: hidden;  
+    }
+
+    .loading .loading-modal {
+        display: block;
+    }
+/* BEGIN Of loading animation */

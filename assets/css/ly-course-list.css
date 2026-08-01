@@ -1,0 +1,253 @@
+.group-name{
+	font-size: 15px;
+	font-family: arial;
+	position: relative;
+	left: 20px;
+	top: 10px;
+}
+
+/*.course-main h2{
+	font-size: 15px;
+	margin:0px;
+	padding: 0px;
+	width: auto;
+	text-align: center;
+	font-family: arial;
+	text-transform: uppercase;
+	margin-bottom: 10px
+}
+*/
+.course-main{
+	width: 1076px;
+	height: auto;
+	/*background-color: red;*/
+	display: inline-block;
+	position: relative;
+	left: 10px;
+	top: 20px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.the-courses{
+	width: 1065px;
+	height: auto;
+	border: 1px solid #000;
+	position: relative;
+	float: left;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.label-clist{
+	width: 1039px;
+	height: 25px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: 1px solid #000;
+	position: relative;
+	left: 10px;
+	top: 5px;
+	padding-top: 5px;
+}
+
+.clist-data{
+	width: 1029px;
+	height: auto;
+	border-bottom: 1px solid #000;
+	position: relative;
+	left: 20px;
+	top: 15px;
+	display: inline-block;
+}
+
+.course-data{
+	width: 1026px;
+	height: auto;
+	float: left;
+	background: url('../image/ico-cl-play.png')no-repeat ;
+	padding-left: 30px;
+	padding-top: 3px;
+	background-position: 0px 3px;
+	display: inline-block;
+	padding-bottom: 14px;
+	font-family: arial;
+	font-size: 14px;
+
+}
+
+.course-data label{
+	font-size: 14px;
+	font-family: arial;
+}
+
+.course-data p{
+	font-size: 12px;
+	font-family: arial;
+}
+
+.pdf-data{
+	width: 1026px;
+	height: auto;
+	float: left;
+	background: url('../image/ico-cl-pdf.png')no-repeat ;
+	padding-left: 30px;
+	font-size: 14px;
+	font-family: arial;
+	padding-top: 2px;
+	padding-bottom: 10px;
+	
+}
+
+ul.aw{
+	width: 1026px;
+	height: auto;
+	/*display: inline-block;*/
+	list-style: none;
+	padding: 0px;
+}
+
+ul.aw li{
+	width: 820px;
+	height: 20px;
+	font-family: arial;
+	/*background: green*/
+}
+
+ul.aw li .file-name{
+	float: left;
+	font-family: arial;
+}
+
+ul.aw li .btn-file{
+	float: right;
+	font-family: arial;
+}
+
+.video-data{
+	width: 996px;
+	height: auto;
+	float: left;
+	background: url('../image/ico-cl-video.png')no-repeat ;
+	padding-left: 30px;
+	font-size: 14px;
+	font-family: arial;
+	padding-top: 2px;
+	padding-bottom: 10px;
+
+}
+
+.sound-data{
+	width: 996px;
+	height: auto;
+	float: left;
+	background: url('../image/ico-cl-sound.png')no-repeat ;
+	padding-left: 30px;
+	font-size: 14px;
+	font-family: arial;
+	padding-top: 2px;
+	padding-bottom: 10px;
+	
+}
+
+.link-data{
+	width: 996px;
+	height: auto;
+	padding-bottom: 10px;
+	float: left;
+	background: url('../image/ico-cl-link.png')no-repeat ;
+	padding-left: 30px;
+	font-size: 14px;
+	font-family: arial;
+	padding-top: 2px;
+}
+
+.exec-data{
+	width: 996px;
+	height: auto;
+	padding-bottom: 10px;
+	float: left;
+	background: url('../image/ico-cl-exec.png')no-repeat ;
+	padding-left: 30px;
+	font-size: 14px;
+	font-family: arial;
+	padding-top: 2px;
+}
+
+
+.cl-examination{
+	width: 1026px;
+	height: auto;
+	display: inline-block;
+	/*background-color: red;*/
+	float: left;
+	margin-top: 15px;
+	position: relative;
+	left: 20px;
+	top: 10px;
+}
+
+.heading-exam{
+	width: 1026px;
+	height: 20px;
+	/*background-color: green;*/
+}
+
+.hd-column{
+	width: auto;
+	height: 17px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+	/*background-color: orange;*/
+	display: inline-block;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-family: arial;
+	float: left;
+	padding-top: 3px;
+	text-decoration: underline;
+	/*border-bottom: 1px solid #000;*/
+	position: relative;
+}
+
+.the-exam{
+	width: 1026px;
+	height: 40px;
+	/*background-color: yellow;*/
+	float: left;
+
+}
+
+.exam-column{
+	width: auto;
+	height: 25px;
+	display: inline-block;
+	/*background-color: red;*/
+	float: left;
+	font-size: 13px;
+	font-family: arial;
+	padding-top: 5px;
+	/*border-left: 1px solid ;*/
+}
+
+.cl-play-exam{
+	width: 35px;
+	height: 25px;
+	background: url('../image/ico-play-exam.png')no-repeat;
+	border: 0px;
+	background-position: left;
+}
+
+.cl-play-exam:hover{
+	background-position: right;
+	cursor: pointer;
+}
+
+.exam-column h1{
+	font-size: 18px;
+	padding: 0;
+	margin: 0;
+}
+

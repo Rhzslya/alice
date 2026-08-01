@@ -1,0 +1,103 @@
+body{
+	/*background-color: #222*/
+}
+
+.wrapper-repot-ans{
+	width: 1010px;
+	height: 450px;
+	background-color: #222;
+	border: 1px solid #5D5D5D;
+	float: left;
+	margin-top: 10px;
+	overflow-y: scroll;
+	padding-top: 50px;
+	padding-left: 90px;
+	
+}
+
+.paper-potrait{
+	width: 800px;
+	height: auto;
+	display: inline-block;
+	background-color: #fff;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*border: 1px solid #000;*/
+	/*margin: auto;*/
+}
+
+.paper-potrait h2{
+	font-family: arial;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 15px;
+}
+
+.paper-potrait table{
+	width: 100%;
+	font-family: arial;
+	font-size: 11px;
+	border-bottom: 1px solid #222
+}
+
+.rep-quest-opt{
+	width: 100%;
+}
+
+.qtrue{
+	color: red
+}
+
+.rep-quest-opt ol.r-quest{
+	font-size: 11px;
+	font-family: arial;
+	margin-top: 10px;
+	margin-left: 10px;
+	line-height: 18px;
+	padding: 0;
+}
+
+.rep-quest-opt ol.r-quest li{
+	text-align: justify;
+	width: 100%;
+	float: left;
+}
+
+
+.rep-quest-opt ol.r-quest ol.r-opt{
+	padding: 0;
+	margin-left: 20px;
+	margin-top:5px;
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+
+.rep-quest-opt ol.r-quest table.tbl-opt{
+	border:0;
+	width: 100%;
+	float: left;
+	font-size: 11px
+}
+
+.rep-quest-opt ol.r-quest table.tbl-opt p{
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+
+.rep-quest-opt ol.r-quest table.tbl-opt li p{
+	font-size: 11px;
+	padding: 0;
+}
+
+
+img.opt-left{
+	float: right;
+
+}
+
+.rep-quest-opt ol.r-quest table.tbl-opt table{
+	border: 0;
+}

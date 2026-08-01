@@ -1,0 +1,453 @@
+.welcome-back{
+	width: 1029px;
+	height: 49px;
+	/*background-color: red;*/
+	float: left;
+}
+
+.welcome-back a.we-back{
+	width: 32px;
+	height: 32px;
+	float: left;
+	background: url('../image/ico-we-back.png') no-repeat;
+	background-position: left;
+	display: block;
+	text-decoration: none;
+}
+
+.welcome-back a.we-back:hover{
+	background-position: right;
+}
+
+
+.wrapper-list-admin{
+	width: 1019px;
+	height: 419px;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+}
+
+.wrapper-list-admin .tab-combo{
+	width: 1019px;
+	height: 33px;
+	float: left;
+	/*background-color: red*/
+}
+
+.wrapper-list-admin .tab-combo .tab-list{
+	width: 352px;
+	height: 33px;
+	/*background-color: blue;*/
+	float: left;
+}
+
+.wrapper-list-admin .tab-combo .combo-wrap{
+	width: 645px;
+	height: 17px;
+	float: left;
+	padding-right: 22px;
+	padding-top: 16px;
+	/*background-color: yellow*/
+}
+
+.tab-combo .combo-wrap input[type=button]{
+	width: 31px;
+	height: 16px;
+	background-color: #e65700;
+	border: 1px solid #848484;
+	color: #fff;
+	font-size: 10px;
+	border-radius: 3px;
+	float: right;
+	font-family: arial
+}
+
+.strip-exam-list{
+	width: 1000px;
+	height: 98px;
+	border: 1px solid #878787;
+	float: left;
+	box-shadow: 0px 0px 2px #bababa;
+	position: relative;
+	left: 12px;
+	top: 8px;
+	background-color: #fff;
+	margin-bottom: 5px;
+}
+
+.strip-exam-list .no-pick{
+	width: 41px;
+	height: 98px;
+	border-right: 1px solid #9a9a9a;
+	position: relative;
+	float: left;
+	background: #dfdfdf;
+}
+
+.strip-exam-list .no-pick label{
+	width: 41px;
+	height: 15px;
+	/*background-color: red;*/
+	float: left;
+	font-family: arial;
+	font-size: 14px;
+	color: #505050;
+	display: block;
+	text-align: center;	
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+.strip-exam-list .no-pick .pick-radio{
+	width: 41px;
+	height: 41px;
+	/*background-color: yellow;*/
+	float: left;
+	text-align: center;
+	position: relative;
+	top: 30px;
+	line-height: 20px
+}
+
+.strip-exam-list .no-pick .pick-radio span{
+	width: 41px;
+	color: #696969;
+	height: 12px;
+	display: block;
+	text-align: center;
+	font-size: 10px;
+	font-family: arial;
+	text-transform: uppercase;
+	font-weight: bold;
+	/*top: -10px;*/
+}
+
+.strip-exam-list .no-pick .pick-radio br{
+	margin-top: -12px;
+}
+.strip-exam-list .examlist-attempt{
+	width: 937px;
+	height: 96px;
+	/*background-color: red;*/
+	float: left;
+}
+
+.top-xlist{
+	width: 941px;
+	height: 65px;
+	/*background-color: pink;*/
+	float: left;
+}
+
+.top-xlist .exams-code{
+	width: 323px;
+	height: 65px;
+	/*background-color: blue;*/
+	float: left;
+	line-height: 20px;
+	padding-left: 12px;
+}
+
+.top-xlist .exams-code h2{
+	font-size: 16px;
+	font-family: arial;
+	color: #0259a2;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 16px;
+	text-overflow: ellipsis;
+	white-space: normal;
+	overflow: hidden;
+}
+
+.top-xlist .exams-code label{
+	font-size: 13px;
+	font-family: arial;
+	color: #0259a2;
+	text-overflow: ellipsis;
+	white-space: normal;
+	overflow: hidden;
+}
+
+.top-xlist .attempt-question{
+	width: 134px;
+	height: 50px;
+	float: left;
+	padding-top: 15px;
+	/*background-color: yellow;*/
+}
+
+.top-xlist .attempt-question .attempt-ex-ad{
+	width: 40px;
+	height: 40px;
+	background: url('../image/ico-attempt.png') no-repeat;
+	background-size: 80px 40PX;
+	background-position: left;
+	display: block;
+	float: left;
+}
+
+.top-xlist .attempt-question .attempt-ex-ad:hover{
+	background-position: right;
+
+}
+
+.top-xlist .attempt-question .question-ed{
+	width: 23px;
+	height: 23px;
+	background: url('../image/ico-edit-question.png')no-repeat;
+	background-position: left;
+	display: block;	
+	float: left;
+	position: relative;
+	top: 8px;
+	left: 4px;
+}
+
+.top-xlist .attempt-question .question-ed:hover{
+	background-position: right;
+}
+
+
+.top-xlist .attempt-question .report-xamp{
+	width: 23px;
+	height: 23px;
+	background: url('../image/ico-report-exam.png')no-repeat;
+	background-position: left;
+	display: block;	
+	float: left;
+	position: relative;
+	top: 8px;
+	left: 4px;
+}
+
+.top-xlist .attempt-question .report-xamp:hover{
+	background-position: right;
+}
+
+
+.top-xlist .access-time-xlist{
+	width: 155px;
+	height: 36px;
+	float: left;
+	border-left: 1px solid #9a9a9a;
+	border-right: 1px solid #9a9a9a;
+	background: url('../image/ico-duration.png')no-repeat;
+	background-position: 20px 20px;
+	font-size: 20px;
+	font-family: arial;
+	font-weight: bold;
+	color: #505050;
+	padding-left: 46px;
+	padding-top: 15px;
+}
+
+.top-xlist .access-time-xlist small{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.top-xlist .access-time-xlist .duration-ed{
+	background: url('../image/ico-edit-duration.png')no-repeat;
+	width: 21px;
+	height: 20px;
+	display: block;
+	float: right;
+	border-radius: 3px;	
+	position: relative;
+	right: 30px;
+	top: 3px;
+}
+
+.top-xlist .access-time-xlist .duration-ed:hover{
+	background-position: right;
+}
+
+.top-xlist .access-date-xlist{
+	width: 265px;
+	height: 51px;
+	float: left;
+	background: url('../image/ico-access.png')no-repeat;
+	background-position: 20px 20px;
+	/*background-color: green;*/
+}
+
+
+.top-xlist .access-date-xlist table{
+	font-family: arial;
+	color: #505050;
+	line-height: 15px;
+	position: relative;
+	left: 45px;
+	top: 14px;
+	float: left;
+}
+
+.top-xlist .access-date-xlist table tr:nth-child(odd){
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.top-xlist .access-date-xlist table tr:nth-child(even){
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.top-xlist .access-date-xlist .access-ed{
+	width: 21px;
+	height: 20px;
+	background: url('../image/ico-edit-access.png')no-repeat;
+	background-position: left;
+	display: block;
+	float: left;
+	position: relative;
+	left: 60px;
+	top: 18px;
+}
+
+.top-xlist .access-date-xlist .access-ed:hover{
+	background-position: right;
+
+}
+
+.bottom-xlist{
+	width: 955px;
+	height: 33px;
+	/*background-color: #dadada;*/
+	float: left;
+}
+
+.bottom-xlist .xlist-course{
+	width: 250px;
+	height: 29px;
+	float: left;
+	border-right: 1px solid #9a9a9a;
+	background: url('../image/ico-course-recent.png')no-repeat;
+	background-position: 16px 5px;
+	color: #505050;
+	font-family: arial;
+	font-size: 12px;
+	padding-left: 46px;
+	padding-top: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bottom-xlist .xlist-instructor{
+	width: 305px;
+	height: 29px;
+	float: left;
+	border-right: 1px solid #9a9a9a;
+	background: url('../image/ico-instructors.png')no-repeat;
+	background-position: 16px 5px;
+	color: #505050;
+	font-family: arial;
+	font-size: 12px;
+	padding-left: 46px;
+	padding-top: 4px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bottom-xlist .xactive{
+	width: 80px;
+	height: 29px;
+	float: left;
+	border-left: 1px solid #9a9a9a;
+	padding-top: 4px;
+	font-family: arial;
+	font-size: 12px;
+	color: #505050;
+	padding-left: 10px
+}
+
+.xactive span{
+	float: left;
+	margin-right: 8px
+}
+
+.xactive a.rounded-none{
+	width: 14px;
+	height: 14px;
+	background: #939393;
+	border: 3px solid #6f6f6f;
+	border-radius: 50%;
+	float: left;
+	margin-left: 2px;
+}
+
+
+.xactive a.rounded-active{
+	width: 14px;
+	height: 14px;
+	background: #3cff00;
+	border: 3px solid #6f6f6f;
+	border-radius: 50%;
+	float: left;
+	margin-left: 2px;
+}
+
+.xactive a.rounded-deactive{
+	width: 14px;
+	height: 14px;
+	background: #ff0000;
+	border: 3px solid #6f6f6f;
+	border-radius: 50%;
+	float: left;
+	margin-left: 2px;
+}
+
+
+.xlist-lang{
+	width: 128px;
+	height: 29px;
+	float: left;
+	/*background-color: red;*/
+	padding-left: 16px;
+	padding-top: 4px;
+	margin-right: 12px;
+}
+
+.xlist-lang span{
+	color: #505050;
+	font-family: arial;
+	font-size: 12px;
+	float: left;
+	margin-right: 15px;
+}
+
+.xlist-lang a.ina-lang{
+	width: 16px;
+	height: 16px;
+	border: 3px solid #c6c6c6;
+	border-radius: 50%;
+	display: block;
+	background: url('../image/ico-ina-language.png') no-repeat;
+	float: left;
+	margin-right: 5px
+}
+
+.xlist-lang a.eng-lang{
+	width: 16px;
+	height: 16px;
+	border: 3px solid #c6c6c6;
+	border-radius: 50%;
+	display: block;
+	background: url('../image/ico-eng-language.png') no-repeat;
+	float: left;
+}
+
+.xlist-lang a:hover{
+	border-color: #ff9c00;
+}
+
+.filter-field{
+	position: relative;
+	/*top: 10px;*/
+	/*left: 10px*/
+}

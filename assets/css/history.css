@@ -1,0 +1,71 @@
+.lcms-form-adit{
+	padding: 0px;
+	width: 1135px;
+	height: 465px;
+}
+
+.header-report{
+	width: inherit;
+	height: 50px;
+	background-color: #454545;
+}
+
+.header-report table{
+	width: inherit;
+	font-family: CGFont;
+	line-height: 12px;
+	position: relative;
+	top: 5px;
+	left: 22px;
+}
+
+.header-report table th{
+	text-align: left;
+	color: #42d1ff;
+	font-size: 11px;
+	font-family: CGFontB;
+	font-weight: normal;
+}
+
+.header-report table td{
+	color: #fff;
+	font-size: 14px;
+}
+
+.student-report{
+	width: inherit;
+	height: 37px;
+	border-bottom: 1px solid #b4b4b4
+}
+
+.student-report table{
+	width: inherit;
+	height: 37px;
+	border:0px;
+	border-collapse: collapse;
+	font-family: CGFont;
+}
+
+.student-report td{
+	padding-left: 20px;
+}
+
+.student-report td:nth-child(odd){
+	background-color: #d1d1d1;
+
+}
+
+.lcms-list{
+	overflow: auto;
+}
+.lc-list span{
+	font-family: CGFontBold;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.lc-list-post span{
+	font-family: CGFontBold;
+	text-transform: uppercase;
+	font-size: 12px;
+}

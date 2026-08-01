@@ -1,0 +1,352 @@
+@font-face{
+	src: url('../Century Gothic.ttf');
+	font-family: CGFont;
+}
+
+@font-face{
+	src: url('../Century Gothic Bold.ttf');
+	font-family: CGFontBold;
+}
+
+
+@font-face{
+	src: url('../MyriadPro.otf');
+	font-family: MPFont;
+}
+
+.lc-strip-training {
+	width: 1100px;
+	background-color: #f8f8f8;
+	height: 82px;
+	/*cursor: pointer;*/
+	/*opacity: 1;*/
+	margin-bottom: 3px;
+
+}
+
+.lc-strip-training:hover{
+	background-color: #dcedfc
+
+}
+
+.lc-strip-no{
+	width: 82px;
+	height: 82px;
+	background-color: #dedede;
+	/*border: 1px solid #000;*/
+	float: left;
+	text-align: center;
+}
+
+	
+.lc-strip-no span{
+	font-size: 25px;
+	position: relative;
+	top: 28px;
+	color: #5c5c5c;
+	/*font-family: MPFont;*/
+	font-family: CGFontBold;
+	
+}
+
+
+.lc-strip-training .lc-training-area{
+	width: 527px;
+	height: 75px;
+	border-right: 1px solid #c0c0c0;
+	position: relative;
+	top: 3px;
+	/*background-color: #f8f8f8;*/
+	float: left;
+}
+
+ .lc-training-area small{
+	font-family: CGFont;
+	font-size: 12px;
+	position: relative;
+	top: 2px;
+	left: 8px;
+	color: #5c5c5c;
+	text-transform: uppercase;
+	/*height: 20px;*/
+}
+
+.lc-training-area small img{
+	width: 19px;
+	height: auto;
+	position: relative;	
+	left: 10px;
+	top: 8px;
+}
+
+.lc-training-area small span{
+	position: relative;
+	left: 15px;
+	top: 4px;
+}
+
+.lc-training-area .contract-no{
+	width: auto;
+	background-color: red;
+	text-align: right;
+	margin-top: 7px;
+}
+
+.lc-training-area .contract-no small{
+	float: left;
+	/*position: relative;*/
+	left: 100px;
+	font-size: 12px;
+}
+
+.lc-training-area .contract-no div{
+	float: left;
+	left: 220px;
+	position: relative;
+	color: #34495e;
+	font-family: CGFont;
+	font-size: 12px;
+	font-weight: bold
+}
+
+.lc-training-area .training-name{
+	font-size: 16px;
+	font-family: CGFontBold;
+	color: #0259a2;
+	font-weight: normal;
+	position: relative;
+	left: 49px;
+	top: 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 410px;
+}
+
+
+
+.lc-schedule{
+	width: 233px;;
+	height: 75px;
+	border-right: 1px solid #c0c0c0;
+	float: left;
+	font-family: CGFont;
+	position: relative;
+	top: 4px;
+}
+
+.lc-schedule small{
+	color: #34495e;
+
+}
+
+.lc-schedule big{
+	font-size: 16px;
+	color: #0259a2;
+	font-family: CGFontBold;
+}
+
+.lc-schedule table{
+	font-size: 12px;
+	text-align: center;
+	width: 100%;
+	font-size:10px;
+	color: #34495e;
+}
+
+.lc-schedule table td small{
+	font-size: 11px;
+	font-family: CGFontBold;
+}
+
+.lc-schedule table td{
+	line-height: 12px;
+}
+
+.lc-schedule table td img{
+	width: 17px;
+	height: auto;
+	margin-right: 8px;
+}
+
+.lc-schedule table td span{
+	font-family: CGFont;
+	text-transform: uppercase;
+	font-size: 12px;
+	position: relative;
+	top: -3px;
+}
+
+.lc-strip-training .lc-instructor{
+	width: 223px;
+	height: 75px;
+	top: 3px;
+	position: relative;
+	/*background-color: #f8f8f8;*/
+	float: left;
+	border-right: 1px solid #c0c0c0;
+
+}
+
+
+.lc-instructor table{
+	width: 100%;
+	/*border: 1px solid #000;*/
+	font-family: CGFont;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #34495e
+}
+
+.lc-instructor table td img{
+	width: 14px;
+	height: auto;
+	position: relative;
+	left: 10px;
+	top: 5px;
+	font-family: CGFont;
+}
+
+.lc-instructor table td span{
+	font-size: 12px;
+	text-transform: none;
+	/*font-weight: bold;*/
+	position: relative;
+	left: 20px;
+	top: 3px;
+	overflow: hidden;
+	font-family: CGFontBold;
+    /*white-space: nowrap;*/
+    text-overflow: ellipsis;
+ 	width: 170px;
+ 	color: #0259a2
+}
+
+.lc-instructor table td span.ins{
+	font-family: CGFont;
+	color: #34495e;
+	text-transform: uppercase;
+	font-size: 12px;
+
+}
+.lc-training-style-btn{
+	/*position: fixed;*/
+	/*left: 735px;*/
+	margin-top: 5px;
+	background: url('../image/img/ico-circ-play-dark.png') transparent no-repeat;
+	background-size: 40px 40px;
+	border: 0px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	position: relative;
+	width: 40px;
+	height: 40px;
+}
+
+.lc-training-style-btn a{
+	display: block;
+	height: 40px
+}
+
+.lc-training-style-btn:hover{
+	/*position: fixed;*/
+	/*left: 735px;*/
+	margin-top: 5px;
+	background: url('../image/img/ico-circ-play-hover.png') transparent no-repeat;
+	background-size: 40px 40px;
+	border: 0px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	position: relative;
+}
+
+.lc-training-disable-btn{
+	/*position: fixed;*/
+	/*left: 735px;*/
+	margin-top: 5px;
+	background: url('../image/img/ico-circ-play-disabled.png') transparent no-repeat;
+	background-size: 40px 40px;
+	border: 0px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	position: relative;
+}
+
+.lc-report-style-btn-big{
+	/*position: fixed;*/
+	/*left: 735px;*/
+	margin-top: 5px;
+	background: url('../image/img/ico-training-report.png') transparent no-repeat;
+	background-size: 40px 40px;
+	border: 0px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	position: relative;
+}
+
+.lc-report-style-btn-big:hover{
+	/*position: fixed;*/
+	/*left: 735px;*/
+	margin-top: 5px;
+	background: url('../image/img/ico-training-report-hover.png') transparent no-repeat;
+	background-size: 40px 40px;
+	border: 0px;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	float: right;
+	right: 10px;
+	top: 5px;
+	position: relative;
+}
+
+.lc-report-style-btn{
+	margin-top: 5px;
+	background: url('../image/img/ico-training-report.png') transparent no-repeat;
+	background-size: 23px 23px;
+	border: 0px;
+	right: 12px;
+	top: 38px;
+	cursor: pointer;
+	width: 23px;
+	height: 23px;
+	float: right;
+	position: relative;
+}
+
+.lc-report-style-btn:hover{
+	margin-top: 5px;
+	background: url('../image/img/ico-training-report-hover.png') transparent no-repeat;
+	background-size: 23px 23px;
+	border: 0px;
+	right: 12px;
+	top: 38px;
+	cursor: pointer;
+	width: 23px;
+	height: 23px;
+	float: right;
+	position: relative;
+}
+
+.lc-action{
+	position: relative;
+	left: 10px;
+	top: 20px;
+	width: 20px;float: left;
+}

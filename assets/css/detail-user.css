@@ -1,0 +1,17 @@
+.du-photo-profile img{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	/*border:2px solid #000;*/
+}
+
+table.detus-table{
+	width: 397px;
+	border-collapse: collapse;
+	border: 1px solid;
+	height: 183px;
+}
+
+table.detus-table th{
+	border-bottom: 1px solid #000
+}

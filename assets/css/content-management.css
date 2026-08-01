@@ -1,0 +1,146 @@
+.tree-area{
+	width: 235px;
+	height: 474px;
+	background: #fff;
+	border: 1px solid #999999;
+	padding-left: 3px;
+	overflow-y: auto;
+	overflow-x: auto;
+	float: left;
+	font-size: 13px;
+	font-family: CGFont
+}
+
+.tree-area .tree a:hover{
+	color: #007cbc
+}
+
+.tree-content{
+	width: 828px;
+	height: 474px;
+	background: #fff;
+	border: 1px solid #999999;
+	float: left;
+	margin-left: 10px;
+}
+
+.tree-block-title{
+	width: 813px;
+	height: 27px;
+	background: #595959;
+	border-bottom: 1px solid #9c9c9c;
+	float: left;
+	padding-left: 15px;
+	color: #ffc000;
+	font-family: CGFont;
+	font-size: 18px;
+	padding-top: 5px;
+}
+
+.scroll-tree-content{
+	width: 818px;
+	height: 436px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.scroll-tree-content .combow{
+	float: left;
+}
+
+.table-course{
+	width: 800px;
+	height: auto;
+	/*background: red;*/
+	/*padding-bottom: 20px;*/
+	float: left;
+}
+
+.head-course{
+	width: 800px;
+	height: 25px;
+	background: #363636;
+	margin-top: 15px;
+	margin-bottom: 4px;
+}
+
+.head-course table th{
+	color: #fff;
+	font-size: 12px;
+	font-family: arial;
+	font-weight: normal;
+	padding-top: 3px;
+	padding-left: 5px;
+	/*border: 1px solid;*/
+}
+
+.is-content-course{
+	width: 800px;
+	height: auto;
+}
+
+.is-content-course table{
+	border-collapse: collapse;
+	width: 800px;
+}
+
+.is-content-course table tr:nth-child(odd){
+	height: 42px;
+	width: 800px;
+	background: #e4e4e4;
+	border-bottom: 3px solid #fff
+}
+
+.is-content-course table tr:nth-child(even){
+	height: 42px;
+	width: 800px;
+	background: #d1d1d1;
+	border-bottom: 3px solid #fff
+}
+
+
+.is-content-course table td{
+	color: #292929;
+	font-family: CGFont;
+	font-size: 12px;
+	/*border: 1px solid;*/
+}
+
+.btn-manage-content{
+	width: 121px;
+	height: 26px;
+	background-color: #ff7703;
+	color: #fff;
+	font-size: 11px;
+	font-family: CGFont;
+	border: 0px;
+	/*float: left;*/
+}
+
+
+.btn-manage-content:hover{
+	background-color: #ff6600;
+	cursor: pointer;
+}
+
+
+.btn-manage-report{
+	width: 64px;
+	height: 26px;
+	background-color: #2dad00;
+	color: #fff;
+	font-size: 11px;
+	font-family: CGFont;
+	border: 0px;
+
+	/*float: left;*/
+}
+
+
+.btn-manage-report:hover{
+	background-color: #258d01;
+	cursor: pointer;
+
+}

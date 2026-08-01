@@ -1,0 +1,152 @@
+#list-quest-no{
+	width:20px;
+	text-align:right;
+}
+
+
+
+.question-grade-easy, .question-grade-medium, .question-grade-hard{
+	width: 68px;
+	height: 22px;
+	color: #393939;
+	text-align: center;
+	border-radius: 4px;	
+	font-size: 8.5pt;	
+}
+
+.question-grade-easy{
+	background-color: #55e54e;
+}
+
+.question-grade-medium{
+	background-color: #ffbd5d;
+}
+
+.question-grade-hard{
+	background-color: #f78693;
+}
+
+/*LIST QUESTION*/
+.kelas{
+	width: auto;
+	height: 20px;
+	padding: 3px;
+	background-color: #F7F7F7;
+	border: 1px solid #8F8F8F;
+	float: left;
+	margin-right: 5px;
+	border-radius: 4px;
+}
+#area-blocker{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.4;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#set-form-add{
+	width:auto;
+	height:auto;
+	padding:10px;
+	background-color:#CCCCCC;
+	border:1px solid #999999;
+	position:absolute;
+	padding:15px;
+	border-radius:5px;
+	box-shadow: 5px 5px 5px #A1A1A1;	
+}
+#page-blocker{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0.7;
+	display: none;
+}
+
+.pop-up-form{
+	width: 200px;
+	height: 200px;
+	background-color: #EDEDED;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+	border-radius: 5px;
+	border: 1px solid #C9C9C9;
+	box-shadow: 0px 0px 10px #4C4C4C;
+	padding-bottom: 10px;
+	display: none;
+}
+.pop-up-form-add{
+	width: 200px;
+	height: 200px;
+	background-color: #EDEDED;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: 1;
+	border-radius: 5px;
+	border: 1px solid #C9C9C9;
+	box-shadow: 0px 0px 10px #4C4C4C;
+	padding-bottom: 10px;
+	display: none;
+}
+.pop-up-form-add .title{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;	
+}
+
+.pop-up-form-add .content{
+	width: 85%;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.pop-up-form-add .button{
+	margin-top: 25px;
+	text-align: center;
+}
+
+.g-easy{
+	background-color: #39990f;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-radius: 3px;
+	color: #fff
+}
+
+.g-medium{
+	background-color: #f86e1a;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-radius: 3px;
+	color: #fff
+}
+
+.g-hard{
+	background-color: #c32020;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border-radius: 3px;
+	color: #fff
+}

@@ -1,0 +1,275 @@
+body{
+	overflow: hidden;
+	background-color: #000;
+}
+
+@font-face{
+	src: url('../Century Gothic.ttf');
+	font-family: CGFont;
+}
+
+.lcms-login-wrapper{
+	width: 506px;
+	height: 640px;
+	background-color: #2b2c2e; 
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+#project-name{
+	border-bottom: 92px solid #0c7fcf;
+    border-left: 68px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 225px;
+    transform: rotate(180deg);
+    position: relative;
+    top: 8px;
+     /*-moz-box-shadow: inset 0 -10px 10px -10px #000000;*/
+    /*-webkit-box-shadow: inset 0 -10px 10px -10px #000000;*/
+    box-shadow: inset 0px 5px 10px -10px #000000;
+}
+
+#project-name .sort-name{
+	position: relative;
+	right: 20px;
+	top: 6px;
+	transform: rotate(180deg);
+}
+
+#project-name .sort-name img{
+	/*float: left;*/
+	width: 34px;
+	height: 34px;
+}
+
+#project-name .sort-name label{
+	font-family: CGFont;
+	position: relative;
+	left: 20px;
+	font-size: 36px;
+	top: -5px;
+	color: #ebf0f4;
+	/*float: left;*/
+}
+
+#project-name .long-name{
+	position: relative;
+	right: 20px;
+	top: 9px;
+	/*font-weight: bold;*/
+	transform: rotate(180deg);
+	font-family: CGFont;
+	color: #7cc8fc;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+}
+
+#client-name{
+	border-bottom: 90px solid #ebf0f4;
+    border-left: 68px solid transparent;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 225px;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+	 /*-moz-box-shadow: inset 0 -10px 10px -10px #000000;*/
+    /*-webkit-box-shadow: inset 0 -10px 10px -10px #000000;*/
+    box-shadow: inset 0 -10px 10px -10px #000000;
+    /*transform: rotate(180deg);*/
+ 
+}
+
+#client-name img{
+	width: 58px;
+	height: 60px;
+	position: relative;
+	float: right;
+	right: 20px;
+	top: 10px;
+}
+
+#client-name div{
+	float: right;
+	/*background-color: red;*/
+	font-size: 11px;
+	position: relative;
+	width: 170px;
+	text-align: right;
+	top: -13px;
+	right: 45px;
+	font-family: CGFont;
+}
+
+#client-name div .pt-iae{
+	font-weight: bold;
+}
+
+.login-group{
+	width: auto;
+	height: auto;
+	position: relative;
+	top: 111px;
+	text-align: center;
+	margin: auto;
+	/*background-color: red;*/
+}
+
+.login-group h3{
+	color: #fff;
+	font-family: CGFont;
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+
+.login-area{
+	position: relative;
+	left: 160px;
+	top: 20px;
+	/*float: left;*/
+}
+
+.login-area .username-text{
+	width: 180px;
+	height: 27px;
+	background-color: #fff;
+	margin-bottom: 5px
+}
+
+.login-area .password-text{
+	width: 180px;
+	height: 27px;
+	background-color: #fff
+}
+
+.username-text input[type=text],.password-text input[type=password]{
+	border: 0px solid #000;
+	position: relative;
+	top: 2px;
+	width: 125px;
+	float: left;
+	padding-left: 5px;
+	font-family: CGFont;
+	font-size: 12px;
+}
+
+.username-text .side-user{
+	width: 27px;
+	height: 27px;
+	background-color: #d5d5d5;
+	float: left;
+	background: url('../image/img/ico-login-user-mini.png')  #d5d5d5;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px 12px; 
+}
+
+.password-text .side-pass{
+	width: 27px;
+	height: 27px;
+	background-color: #d5d5d5;
+	float: left;
+	background: url('../image/img/ico-password-mini.png')  #d5d5d5;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px 12px; 
+}
+
+.login-group .go-login{
+	height: 40px;
+	width: 40px;
+	background-color: #2b2c2e;
+	border-radius: 50%;
+	border: 0px solid #2b2c2e;
+	position: relative;
+	left: 165px;
+	top: -50px;
+	/*float: left;*/
+}
+
+.login-group .go-login .submit-me{
+	width: 32px;
+	height: 32px;
+	background-color: #3593d3;
+	border-radius: 50%;
+	border: 0px;
+	position: relative;
+	top:4px;
+	left: 0px;
+	box-shadow: inset 0px 0px 0px rgba(225,225,225,0.5), 0px 3px 3px  rgba(0,0,0,0.5) ;
+	background: url('../image/img/ico-go.png') #3f8b0b;
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.footer{
+	width: 506px;
+	height: 20px;
+	text-align: center;
+	font-size: 9px;
+	color: #fff;
+	font-family: CGFont;
+	position: relative;
+	top: 240px;
+}
+
+.warning-area{
+	width: 506px;
+	height: 640px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	opacity: .8;
+	background-color: #000;
+	z-index: 5; 
+}
+
+.invalid img{
+	width: 100px;
+
+}
+
+.invalid{
+	width: 506px;
+	height: 180px;
+	background-color: #ae0000;
+	color: #fff;
+	text-align: center;
+	padding-top: 10px;
+	position: absolute;
+	top: 220px;
+	z-index: 9;
+}
+
+.invalid span{
+	font-size: 20px;
+	color: #fff;
+	font-family: CGFont;
+	position: relative;
+	top:15px;
+	font-weight: bold;
+}
+
+.invalid-warning{
+	font-family: CGFont;
+	color: #fff;
+	position: relative;
+	top: 100px;
+	font-size: 12px;
+	background-color: #b30400;
+	padding: 4px 5px;
+	width: 200px;
+	text-align: center;
+	border-radius: 5px;
+	margin: auto;
+}

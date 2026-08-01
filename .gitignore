@@ -1,0 +1,9 @@
+/application/cache/
+/application/logs/*
+!/application/logs/index.html
+/exim/
+/uploads/*
+!/uploads/index.html
+.DS_Store
+.env
+EOF

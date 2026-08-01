@@ -1,0 +1,286 @@
+var base_url = $('#base-url').html();
+
+function show_question(no){
+	save_answer();
+
+	//	Set Which Question to Show
+	$('.question-each').css('display','none');
+	$('.question-pane').find('div.quest-'+no).css('display', 'block');
+
+	//	Set Current Question No, for Next & Prev navigation purpose
+	$('input[name=f_curr_no]').val(no);
+
+	//	Navigation Prevention for Next or Prev
+	var max_no = $('input[name=f_max_no]').val();
+	///	If The End of No
+
+	if (no >= max_no) {
+		$('#next-pane').css('display','none');
+	}
+	else {
+		$('#next-pane').css('display','block');
+	}
+	///	If The Beginning of No
+	if (no <= 1) {
+		$('#prev-pane').css('display','none');
+	}
+	else {
+		$('#prev-pane').css('display','block');
+	}
+
+	return false;
+}
+
+function show_next(){	
+	//	Get Current No
+	var curr_no = $('input[name=f_curr_no]').val();
+	//	Add 1 the Current No
+	var next_no = parseInt(curr_no) + 1;
+	//	Get Queston to Show
+	show_question(next_no);
+
+	return false;
+}
+
+function show_prev(){
+	//	Get Current No
+	var curr_no = $('input[name=f_curr_no]').val();
+	//	Sub 1 the Current No
+	var prev_no = parseInt(curr_no) - 1;
+	//	Get Queston to Show
+	show_question(prev_no);
+}
+
+function save_answer(){
+	var curr_no = $('input[name=f_curr_no]').val();
+
+	var q_index		= parseInt(curr_no) - 1;
+	var att_code 	= $('input[name=f_att_code]').val();
+	var q_type		= $('input[name=f_question_type_'+curr_no+']').val();
+
+	if (q_type == 3) {
+		// Update Answers for Question Type Matching - Ajax Proccess
+		var max_opt		= $('input[name=f_max_option_'+curr_no+']').val();
+		var answer 		= "";
+		var answer_point = 0;
+		
+		var answered = false;
+		for (i=0; i<max_opt; i++) {
+			ans = $('select[name=f_pair_answer_'+i+']').val();
+
+			answer	+= ans+"-";
+
+			if (ans != "NULL") {
+				answered = true;
+			}			
+		}
+
+		if (answered) {
+			answer 	= answer.slice(0,-1);
+
+			alert(answer);
+
+			$.ajax({
+				type		: 'post',
+					dataType	: 'json',
+					data 		: {js_att_code : att_code, js_q_index : q_index, js_answer : answer,js_type_question : q_type},
+					url			: base_url+'examination/save_answer_ajax_match'
+				
+			});
+
+			$('#qpageno-'+curr_no).addClass('answered');
+		}
+	}
+	else {
+		//	Update Answers for Question Type Multiple Choice or True/False - Ajax Proccess
+
+		var answer 			= $('input[name=f_answer-'+q_index+']:radio:checked').val();
+		var answer_point 	= $('input[name=f_answer-'+q_index+']:radio:checked').attr('point');
+
+		if (answer) {
+			var answered = answer;
+			var point = answer_point;
+		}else{
+			var answered = 'NULL';
+			var point = 'NULL';
+		}
+		
+		if (answer) {
+
+			$.ajax({
+					type		: 'post',
+					dataType	: 'json',
+					data 		: {js_att_code : att_code, js_q_index : q_index, js_answer : answered, js_answer_point : point,js_type_question : q_type},
+					url			: base_url+'examination/save_answer_ajax'
+			});
+
+			$('#qpageno-'+curr_no).addClass('answered');
+		}
+	}
+
+	//	Update Remaining Time
+	var duration = $('input[name=f_duration]').val();
+	var time_running = parseInt($('input[name=f_time_running]').val());
+	
+	if (duration !== '') {
+		$.ajax({
+				type		: 'post',
+				dataType	: 'json',
+				data 		: { js_att_code : att_code, js_duration : duration, js_time_running : time_running },
+				url			: base_url+'examination/update_remain_time',
+				success		: function(output){
+					var time = output['duration'] - time_running;
+
+					// input new value to hiddent text
+					$('input[name=f_duration]').val(time);
+					$('input[name=f_duration_reminder]').val(time);
+
+					// Stop the counter
+					$("#countdown").jCounter('stop');
+					$("input[name=f_duration_reminder]").jCounter('stop');
+
+					/* BEGIN Make a new counter */
+						// Counter time
+						$("#countdown").jCounter({
+							format: "dd:hh:mm:ss",
+							twoDigits: 'on',
+							customRange: time+':0',
+							callback: function(){
+									save_answer_and_redirect();
+							}
+						});
+						// Counter Reminder time after 15 minutes
+						if (time >= 900) {
+							$("input[name=f_duration_reminder]").jCounter({
+								format: "dd:hh:mm:ss",
+								twoDigits: 'on',
+								customRange: output['duration'] - time_running+':900',
+								callback: function(){
+										$('.reminder-time').fadeIn(300);
+								}
+							});
+						}
+					/* END Make a new counter */
+
+					/* BEGIN Of show the notif if duration has changed */
+						if (output['duration_notif']  == 1) {
+							$('.duration-changed').fadeIn(300);
+						}
+					/* END Of show the notif if duration has changed */
+				}
+		});
+	}
+}
+
+$(document).ready(function(){
+	//third counter
+	var duration = $('input[name=f_duration]').val();
+
+	var uc = $('input[name=f_att_code]').val();
+
+	if (duration != "") {
+		$("#countdown").jCounter({
+			format: "dd:hh:mm:ss",
+			twoDigits: 'on',
+			customRange: duration+':0',
+			callback: function(){
+					save_answer_and_redirect();
+			}
+		});
+
+		$("input[name=f_duration_reminder]").jCounter({
+			format: "dd:hh:mm:ss",
+			twoDigits: 'on',
+			customRange: duration+':900',
+			callback: function(){
+					$('.reminder-time').fadeIn(300);
+			}
+		});
+	}
+
+
+	$('body').on('click', '.radio-label', function() {
+		var i = $(this).attr('quest');
+		var j = $(this).attr('option');
+		var value = $(this).attr('val');
+
+		// Remove all prop
+		$('input[name=f_answer-'+i+']').removeProp('checked');
+		$('.label-'+i).removeProp('style');
+		$('.label-'+i).removeClass('radio-option-checked');
+
+		// Make a new prop
+		$('input:radio[name=f_answer-'+i+']').filter('[value='+value+']').prop('checked', true);
+		$('.label-checked-'+i+'-'+j).prop('style', 'background-color:#FF9B19');
+
+		var point = $(this).attr('point');
+		var i_point = $(this).attr('index-option');
+		$('input[name=f_answer_point_'+i_point+']').val(point);
+		
+		//alert(i_point+'  '+point);
+	});
+
+	// Close duration reminder notification
+	$('body').on('click', '.close-reminder-time', function() {
+		$('.reminder-time').hide();
+	});
+
+	// Close duration changed notification
+	$('body').on('click', '.close-duration-changed', function() {
+		$.ajax({
+				type		: 'post',
+				dataType	: 'json',
+				data 		: { js_uc : uc },
+				url			: base_url+'examination/update_duration_notif'
+		});
+
+		$('.duration-changed').hide();
+	});
+
+});
+
+function save_answer_and_redirect(){
+	var curr_no 	= $('input[name=f_curr_no]').val();
+
+	var q_index		= parseInt(curr_no) - 1;	
+	var att_code 	= $('input[name=f_att_code]').val();
+	var q_type		= $('input[name=f_question_type_'+curr_no+']').val();	
+
+	if (q_type == 3) {
+		var max_opt			= $('input[name=f_max_option_'+curr_no+']').val();	
+		var match_key 		= "";
+		var match_answer 	= "";
+
+		for (i=0; i<max_opt; i++) {
+			//key = $('input[name=f_pair_quest_'+i+']').val();
+			ans = $('select[name=f_pair_answer_'+i+']').val();
+
+			//match_key 		+= key+"-";
+			match_answer	+= ans+"-";
+		}
+
+		match_key 		= match_key.slice(0,-1);
+
+		if (match_answer != "") {			
+			match_answer 	= match_answer.slice(0,-1);
+		}
+		
+		//window.open(base_url+'assessment/finish_by_time/'+att_code+'/'+q_index+'/'+match_answer+'/'+match_key, '_self');
+		window.open(base_url+'examination/finish_by_match/'+att_code+'/'+q_index+'/'+match_answer+'/'+q_type, '_self');
+	}
+	else {
+
+		var answer 	= $('input[name=f_answer-'+q_index+']:radio:checked').val();
+		var answer_point 	= $('input[name=f_answer-'+q_index+']:radio:checked').attr('point');
+
+		if (answer) {
+			var answered = answer;
+			var point = answer_point;
+		}else{
+			var answered = 'NULL';
+			var point = 'NULL'
+		}
+
+		window.open(base_url+'examination/finish_by_time/'+att_code+'/'+q_index+'/'+answered+'/'+point+'/'+q_type, '_self');
+	}	
+}

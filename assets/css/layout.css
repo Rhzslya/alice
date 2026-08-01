@@ -1,0 +1,114 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: cambria;
+	font-size: 12pt;
+}
+
+a{
+	text-decoration: none;
+	color: #424242;
+}
+
+a:hover{
+	color: #0D5DAD;
+}
+
+a img{
+	border: none;
+}
+
+#wrapper{
+	width: 1280px;
+	height: 640px;
+	margin: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border: 1px solid #000;
+}
+
+#header{
+	width: inherit;
+	height: 70px;
+	background-color: #F7D79C;
+}
+
+#main{
+	width: inherit;
+	height: auto;
+	overflow: hidden;
+}
+
+#left-bar{
+	width: 250px;
+	height: auto;
+	min-height: 555px;
+	background-color: #FEEFC8;
+	float: left;
+}
+
+#content{
+	width: 990px;
+	height: auto;
+	min-height: 515px;
+	float: left;
+	padding: 20px;
+	background-color: #fff
+}
+
+#footer{
+	width: inherit;
+	height: 15px;
+	background-color: #F7D79C;
+}
+
+.im-tabs {
+	width: block;
+	overflow: hidden;
+	margin-bottom: 10px;
+	height: 25px;
+	font-size: 9pt;
+	position: relative;
+	right: 0px;
+	top: 0px;
+}
+
+.im-tabs a{
+	padding: 1px 10px;
+	padding-bottom: 2px;
+	margin-right: 6px;
+	border-radius: 4px;
+	background-color: #D7D7D7;
+	float: left;
+}
+
+.im-tabs a:hover, .im-tabs a.tab-current:hover{
+	background-color: #0259a2;
+	color: #ffffff;
+}
+
+.im-tabs a.tab-current{
+	background-color: #014276;
+	color: #ffffff;	
+}
+
+a.ina-lang {
+	width: 16px;
+	height: 16px;
+	border: 3px solid #c6c6c6;
+	border-radius: 50%;
+	display: block;
+	background: url('../image/ico-ina-language.png') no-repeat;
+	float: left;
+	margin-right: 5px;
+}
+
+a.eng-lang {
+	width: 16px;
+	height: 16px;
+	border: 3px solid #c6c6c6;
+	border-radius: 50%;
+	display: block;
+	background: url('../image/ico-eng-language.png') no-repeat;
+	float: left;
+}

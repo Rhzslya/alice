@@ -1,0 +1,87 @@
+.next-icon, .next-icon-disabled{
+	width: 32px;
+	height: 33px;
+	margin-left: 14px;
+	margin-top: 9px;
+	border: none;	
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.next-icon{
+	cursor: pointer;
+	background: url('../image/ico-next.png') no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.next-icon-disabled{
+	background: url('../image/ico-next-disabled.png')no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.prev-icon, .prev-icon-disabled, .play-icon, .replay-icon, .stop-icon{
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	margin-top: 5px;
+	border: none;	
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.prev-icon{
+	cursor: pointer;
+	background: url('../image/ico-prev.png') no-repeat;
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+
+}
+
+.prev-icon-disabled{
+	cursor: pointer;
+	background: url('../image/ico-prev-disabled.png');
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.play-icon{
+	cursor: pointer;
+	background: url('../image/ico-play-vid.png');
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.replay-icon{
+	cursor: pointer;
+	background: url('../image/ico-rewind.png');
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.stop-icon{
+	cursor: pointer;
+	background: url('../image/ico-pause.png');
+	background-position: center center;
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+	z-index: 999 ;
+}

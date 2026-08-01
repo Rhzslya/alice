@@ -1,0 +1,218 @@
+.page-blocker {
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/image/bg-page-blocker.png") repeat scroll 0% 0% transparent;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    z-index: 0;
+}
+
+.pop-up-form{
+  width: 200px;
+  height: 200px;
+  background-color: #EDEDED;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #C9C9C9;
+  box-shadow: 0px 0px 10px #4C4C4C;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.pop-up-form .title{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;  
+}
+
+.pop-up-form .content{
+  width: 85%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.pop-up-form .button{
+  margin-top: 25px;
+  text-align: center;
+}
+
+.pop-up-detail-question{
+  width: 200px;
+  height: 200px;
+  background-color: #EDEDED;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #C9C9C9;
+  box-shadow: 0px 0px 10px #4C4C4C;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.pop-up-detail-exam{
+  width: 200px;
+  height: 200px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 0px 10px #4C4C4C;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.pop-up-detail-user-all{
+  width: 200px;
+  height: 200px;
+  background-color: #EDEDED;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #C9C9C9;
+  box-shadow: 0px 0px 10px #4C4C4C;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.pop-up-detail-instructor{
+  width: 200px;
+  height: 200px;
+  background-color: #EDEDED;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  border-radius: 5px;
+  border: 1px solid #C9C9C9;
+  box-shadow: 0px 0px 10px #4C4C4C;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.pop-title{
+  margin: 0;
+  padding: 0;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  font-family: CGFont;
+  font-weight: normal;
+  font-size: 25pt;
+  color: #5d5d5d;
+  letter-spacing: 1px;
+}
+
+
+.pop-up-participant-detail{
+  width: 1200px;
+  height: 600px;
+  background-color: #EDEDED;
+  border-radius: 6px;
+  box-shadow: 0px 0px 8px #000000;  
+  overflow: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  z-index: 6;
+  display: none;
+  
+}
+
+.pop-up-profile{
+  width: 200px;
+  height: 200px;
+  background-color: #EDEDED;
+  border-radius: 6px;
+  box-shadow: 0px 0px 8px #000000;  
+  overflow: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  z-index: 1;
+  display: none;
+  
+}
+
+/*Profile*/
+.profile-info {
+    width: 100%;
+    height: 181px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.profile-ring {
+    width: 176px;
+    height: 176px;
+    border: 2px solid #0259A2;
+    border-radius: 95px;
+    float: left;
+    margin-left: 100px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    margin: 13px auto auto;
+    background-position: center center;
+    background-color: #FFA500;
+}
+
+.profile-data {
+    width: 500px;
+    height: 100px;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.detail-paper {
+    border: 1px solid #808080;
+    background-color: #FFF;
+    width: 900px;
+    height: auto;
+    min-height: 400px;
+    margin: 10px auto 20px;
+    padding: 50px 20px 60px;
+    box-shadow: 5px 5px 5px #333;
+}
+.judul-detail {
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align:center;
+}

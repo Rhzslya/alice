@@ -1,0 +1,398 @@
+.main-home{
+	width: 1082px;
+	height: 464px;
+	/*background: red;*/
+	float: left;
+	/*margin-top: 20px;*/
+}
+
+.main-manage{
+	width: 675px;
+	height: 202px;
+	background: #303030;
+	box-shadow: 0px 0px 3px #000
+}
+
+
+.manage-home{
+	width: 989px;
+	height: 202px;
+	margin-left: 51px;
+	margin-top: 97px;
+}
+
+.manage-title{
+	width: 675px;
+	height: 29px;
+	float: left;
+	display: block;
+	font-size: 22px;
+	font-family: CGFont;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	padding-top: 7px;
+}
+
+.menu-wrap-manage{
+	width: 723px;
+	height: 155px;
+	/*background-color: red;*/
+	float: left;
+	margin-top: 10px;
+}
+
+.manage-ul-wrap{
+	width: 392px;
+	height: 208px;
+	/*background-color: red;*/
+	float: left;
+}
+
+.main-btn-admin{
+	width: 256px;
+	height: 67px;
+	float: left;
+	margin-left: 10px
+}
+
+.home-btn-report{
+	width: 252px;
+	height: 55px;
+	background-color: #59c214;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+	/*margin-top: 10px;*/
+
+}
+
+.home-ico-report{
+	width: 55px;
+	height: 55px;
+	background: url('../image/ico-home-report.png')no-repeat #429d06;
+	float: left;
+	background-position: center center;
+	background-size: 23px
+}
+
+.home-lbl-report,.home-lbl-setting,.home-lbl-guide{
+	width: 171px;
+	height: 45px;
+	float: left;
+	font-family: CGFont;
+	font-size: 24px;
+	color: #fff;
+	padding-left: 26px;
+	text-transform: uppercase;
+	padding-top: 10px;
+
+}
+
+.home-btn-setting{
+	width: 252px;
+	height: 55px;
+	background-color: #ff8e14;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+	/*margin-left: 14px;*/
+	margin-top: 18px;
+
+}
+
+.home-ico-setting{
+	width: 55px;
+	height: 55px;
+	background:  url('../image/ico-setting.png')no-repeat #ff6e03;
+	float: left;
+	background-position: center center	
+
+}
+
+.home-btn-guide{
+	width: 252px;
+	height: 55px;
+	background-color: #ff2323;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+	/*margin-left: 14px;*/
+	margin-top: 18px;
+}
+
+.home-ico-guide{
+	width: 55px;
+	height: 55px;
+	background: url('../image/ico-guide.png')no-repeat #cc0000;
+	float: left;
+	background-position: center center
+}
+
+.home-btn-guide:hover,.home-btn-setting:hover,.home-btn-report:hover{
+	cursor: pointer
+}
+
+.home-btn-guide:hover{
+	background-color: #e11a1a
+}
+
+.home-btn-setting:hover{
+	background-color: #fe8604
+}
+
+.home-btn-report:hover{
+	background-color: #4fbd06
+}
+
+.manage-ul-wrap{
+	width: 277px;
+	height: 170px;
+	margin-left: 39px
+
+}
+
+.manage-ul-wrap ul{
+	list-style: none;
+	width: 277px;
+	height: 170px;
+	padding: 0;
+	margin: 0;
+}
+
+.manage-ul-wrap ul li{
+	height: 38px;
+	width: 277px;
+	border-bottom: 1px solid #7e7e7e;
+	background-color: #303030;
+}
+
+.manage-ul-wrap ul li a{
+	display: block;
+	font-family: CGFont;
+	font-size: 14px;
+	color: #bababa;
+	text-decoration: none;
+	padding-top: 12px;
+	text-transform: uppercase;
+	padding-left: 54px;
+}
+
+.manage-ul-wrap ul li:hover{
+	background-color: #363636
+}
+
+/*start ul li background*/
+
+.home-period{
+	background: url('../image/ico-period.png')no-repeat;
+	background-position: 18px 12px;
+}
+
+.home-student{
+	background: url('../image/ico-student.png')no-repeat;
+	background-position: 18px 12px;
+}
+
+.home-content{
+	background: url('../image/ico-contents.png')no-repeat;
+	background-position: 18px 13px;
+	background-size: 15px 16px;
+}
+
+.home-question{
+	background: url('../image/ico-question-2.png')no-repeat;
+	background-position: 18px 12px;
+}
+
+.home-course{
+	background: url('../image/ico-courses.png')no-repeat;
+	background-position: 18px 12px;
+
+}
+
+.home-group{
+	background: url('../image/ico-group-2.png')no-repeat;
+	background-position: 18px 12px;
+
+}
+.home-participant{
+	background: url('../image/ico-participant.png')no-repeat;
+	background-position: 18px 12px;
+	background-size: 16px;
+}
+
+.home-pukp{
+	background: url('../image/ico-pukp-upt.png')no-repeat;
+	background-position: 18px 12px;
+
+}
+
+.home-inst-adm{
+	background: url('../image/ico-instructor-grey.png')no-repeat;
+	background-position: 18px 12px;
+	background-size: 16px;
+}
+
+.home-inst-assign{
+	background: url('../image/ico-assignment.png')no-repeat;
+	background-position: 18px 13px;
+	/*background-size: 17px;*/
+}
+
+.set-backup{
+	background: url('../image/ico-set-backup.png')no-repeat;
+	background-position: 18px 13px;
+	background-size: 15px 16px;
+}
+
+.set-restore{
+	background: url('../image/ico-set-restore.png')no-repeat;
+	background-position: 18px 13px;
+	background-size: 15px 16px;
+}
+
+.set-datalog{
+	background: url('../image/ico-datalog.png')no-repeat;
+	background-position: 18px 13px;
+	background-size: 15px 16px;
+}
+
+
+.set-update{
+	background: url('../image/ico-set-update.png')no-repeat;
+	background-position: 15px 15px;
+	background-size: 17px 15px;
+}
+
+.set-res-password{
+	background: url('../image/ico-set-res-password.png')no-repeat;
+	background-position: 18px 13px;
+	background-size: 17px 15px;
+}
+/* --------------------------------------- START CSS STYLE HOME STUDENT ------------------*/
+
+.stu-wrap{
+	width: 995px;
+	height: 302px;
+	margin-top: 80px;
+	margin-left: 80px;
+}
+
+.stu-course{
+	width: 260px;
+	height: 260px;
+	background: url('../image/ico-course-big.png') no-repeat #1ab8fa;
+	float: left;
+	background-position: center 65px;
+	background-size: 80px;
+	box-shadow: 0px 0px 2px #000
+
+}
+
+.stu-course:hover{
+	background-color: #00a5ef
+}
+
+.stu-course a,.stu-report a,.stu-guide a{
+	display: block;
+	height: 69px;
+	font-family: CGFont;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-top: 187px;
+}
+
+.stu-report{
+	width: 260px;
+	height: 260px;
+	background: url('../image/ico-report-bi.png') no-repeat #59c214;
+	float: left;
+	margin-left: 47px;
+	background-position: center 65px;
+	background-size: 70px;
+	box-shadow: 0px 0px 2px #000
+
+}
+
+.stu-report:hover{
+	background-color: #47b400
+}
+
+.stu-guide{
+	width: 260px;
+	height: 260px;
+	background: url('../image/ico-guide-big.png') no-repeat #ff2323;
+	float: left;
+	margin-left: 47px;
+	background-position: center 65px;
+	background-size: 80px;
+	box-shadow: 0px 0px 2px #000
+}
+
+
+.stu-guide:hover{
+	background-color: #ed1414
+}
+
+/*----------------------------------------------- Start style Home Instructor ready? GO!*/
+
+.inst-home-wrap{
+	width: 934px;
+	height: 234px;
+	margin-top: 92px;
+	margin-left: 57px;
+	/*background: yellow*/
+}
+
+.manage-inst{
+	width: 403px;
+	height: 233px;
+	background: #303030;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+}
+
+.ins-report{
+	width: 233px;
+	height: 233px;
+	background: url('../image/ico-report-bi.png')no-repeat #59c214;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+	margin-left: 32px;
+	background-position: center 60px;
+	background-size: 65px 
+}
+
+.ins-guide{
+	width: 233px;
+	height: 233px;
+	background: url('../image/ico-guide-big.png')no-repeat #ff2323;
+	box-shadow: 0px 0px 2px #000;
+	float: left;
+	margin-left: 32px;
+	background-position: center 60px;
+	background-size: 70px;
+	color: #fff
+}
+
+.ins-report a,.ins-guide a{
+	display: block;
+	height: 65px;
+	font-family: CGFont;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding-top: 170px;
+	/*background-color: red*/
+}
+
+.ins-report:hover{
+	background-color: #45ad00
+}
+
+.ins-guide:hover{
+	background-color: #ec1212
+}
