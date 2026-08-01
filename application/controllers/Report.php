@@ -2997,34 +2997,39 @@ class Report extends CI_COntroller {
 		$this->participant_master_m->empty_temp();
 		
 
-		//	Insert to Temp Table
-		$templine = NULL;
 		// Read in entire file
-		$lines = file("./exim/".$file_name);
-		$dec = $this->encrypt->decode($lines[0]);
+        $lines = file("./exim/".$file_name);
+        $dec = $this->encrypt->decode($lines[0]);
 
-		$de_lines = explode("\n\r",$dec);
+        // Gunakan preg_split agar aman untuk semua jenis format baris file (.cba)
+        $de_lines = preg_split("/\r\n|\n|\r/", $dec);
 
-		foreach ($de_lines as $line) {
-			
-			// Skip it if it's a comment
-			if (substr($line, 0, 2) == '--' || $line == '')
-			    continue;
+        // Nonaktifkan pelaporan error database CodeIgniter sementara agar tidak fatal/stop
+        $this->db->db_debug = FALSE;
 
-			// Add this line to the current segment
-			$templine .= $line;
+        $templine = '';
+        foreach ($de_lines as $line) {
+            $trimmed_line = trim($line);
+            
+            // Lewati baris kosong atau komentar SQL
+            if ($trimmed_line == '' || strpos($trimmed_line, '--') === 0 || strpos($trimmed_line, '/*') === 0) {
+                continue;
+            }
 
-			// If it has a semicolon at the end, it's the end of the query
-			if (substr(trim($line), -2, 2) == ');') {
+            // Gabungkan baris ke temporary query
+            $templine .= $line . "\n";
 
-				// Perform the query
-				$this->db->query($templine);
-				 // echo $templine;
+            // Jika karakter terakhir adalah titik koma (;), jalankan kuerinya
+            if (substr($trimmed_line, -1) == ';') {
+                // Eksekusi query, jika gagal akan dilewati otomatis tanpa membuat halaman error
+                @$this->db->query($templine);
+                
+                $templine = ''; // Reset untuk query berikutnya
+            }
+        }
 
-			    // Reset temp variable to empty
-			    $templine = NULL;
-			}
-		}
+        // Kembalikan status db_debug seperti semula
+        $this->db->db_debug = TRUE;
 
 		$query = $this->pengajuan_ukp_m->temp_not_in_real();
 		$value = NULL;
@@ -3722,38 +3727,51 @@ class Report extends CI_COntroller {
 		unlink("./exim/".$file_name);
 	}
 
-function upload(){
-		error_reporting(E_ALL);
-        ini_set('display_errors', 1);
+public function upload(){
+		date_default_timezone_set('Asia/Jakarta');
+        ini_set('display_errors', '1');
+        ini_set('display_startup_errors', '1');
+        error_reporting(E_ALL);
+        set_time_limit(0);
+        ini_set('memory_limit', '-1');
 
-        if ($this->input->post('f_save')){
-            $data = NULL;
+        try {
+            if ($this->input->post('f_save')){
+                $upload_path = './exim/';
+                if (!is_dir($upload_path)) {
+                    mkdir($upload_path, 0777, TRUE);
+                }
 
-            $config['upload_path']          = './exim/';
-			if (!is_dir($upload_path)) {
-    		mkdir($upload_path, 0777, TRUE);
-}
-            $config['allowed_types']        = 'cba|sql';
-            $config['max_size']             = 150000;
-            $config['overwrite']            = TRUE;
+                $config['upload_path']          = $upload_path;
+                $config['allowed_types']        = 'cba|sql';
+                $config['max_size']             = 150000;
+                $config['overwrite']            = TRUE;
 
-            $this->load->library('upload', $config);
-            $this->upload->initialize($config);
-            if ( ! $this->upload->do_upload('f_file')){
-                $this->upload->display_errors();    
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
+                
+                if ( ! $this->upload->do_upload('f_file')){
+                    echo "Upload Error: " . $this->upload->display_errors('', '');
+                    exit;
+                }
+                else {
+                    $upload_data    = $this->upload->data();
+                    $file_name      = $upload_data['file_name'];
+
+                    // Panggil do_update dan tangkap jika ada error di dalamnya
+                    $this->do_update($file_name);
+
+                    $this->session->set_flashdata('msg','Success upload data!'); 
+                    redirect('report');
+                }
             }
-            else {
-                $upload_data    = $this->upload->data(); //Returns array of containing all of the data related to the file you uploaded.
-                $file_name      = $upload_data['file_name'];
-
-                //$this->decrypt_report($file_name);
-                $this->do_update($file_name);
-
-                $this->session->set_flashdata('msg','Success upload data!'); 
-
-                // Redirect to report (Catatan: redirect harus ditaruh setelah set_flashdata agar pesannya terbaca)
-                redirect('report');
-            }
+        } catch (\Throwable $e) {
+            // Ini akan memaksa semua jenis error fatal / exception keluar sebagai teks merah
+            echo "<h3>Terjadi Fatal Error / Exception:</h3>";
+            echo "<pre>";
+            print_r($e);
+            echo "</pre>";
+            exit;
         }
     }
 
