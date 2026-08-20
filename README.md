@@ -6,7 +6,7 @@
 
 ### 1.1 Install Docker Desktop
 
-Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menjalankan aplikasinya, kamu tidak perlu install PHP atau MySQL secara manual. Ini instalasi biasa seperti install aplikasi lain, cuma ada beberapa langkah tambahan — ikuti persis.
+Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menjalankan aplikasinya, kamu tidak perlu install PHP atau MySQL secara manual. Ini instalasi biasa seperti install aplikasi lain, cuma ada beberapa langkah tambahan. Ikuti persis.
 
 #### Kalau komputer kamu Windows
 
@@ -14,10 +14,10 @@ Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menj
 2. Cari tombol **Download Docker Desktop**, klik, pilih versi **Windows**.
 3. Setelah file `Docker Desktop Installer.exe` selesai terdownload, buka/klik dua kali file itu.
 4. Ikuti saja instruksi di layar, klik **Next**/**OK** terus sampai selesai. Kalau muncul pilihan/centangan yang tidak dimengerti, biarkan saja default-nya (jangan diubah-ubah), lalu lanjut.
-5. Kalau muncul kotak dialog soal **WSL 2** (Windows Subsystem for Linux), ikuti link/tombol yang disediakan installer untuk install itu juga — biasanya installer akan memandu otomatis, atau minta restart komputer dulu.
+5. Kalau muncul kotak dialog soal **WSL 2** (Windows Subsystem for Linux), ikuti link/tombol yang disediakan installer untuk install itu juga. Biasanya installer akan memandu otomatis, atau minta restart komputer dulu.
 6. Setelah instalasi selesai, **restart komputer**.
 7. Setelah komputer nyala lagi, buka **Docker Desktop** dari Start Menu.
-8. Kalau diminta buat akun/login Docker, boleh dilewati (pilih "Skip" atau "Continue without signing in" kalau ada) — tidak wajib untuk pemakaian ini.
+8. Kalau diminta buat akun/login Docker, boleh dilewati (pilih "Skip" atau "Continue without signing in" kalau ada). Tidak wajib untuk pemakaian ini.
 9. Tunggu sampai muncul tulisan **"Docker Desktop is running"** atau ikon paus 🐳 di pojok kanan bawah (system tray) sudah tidak lagi loading/berputar.
 
 #### Kalau muncul error "virtualization is not enabled" / "Hyper-V" / "WSL"
@@ -38,24 +38,24 @@ Ini artinya ada fitur di Windows yang belum aktif. Bisa dibenerin sendiri:
 
 6. Tunggu sampai selesai, lalu buka **Docker Desktop** lagi.
 
-Kalau Docker Desktop sekarang sudah bisa jalan normal, selesai — lanjut ke langkah berikutnya di panduan ini.
+Kalau Docker Desktop sekarang sudah bisa jalan normal, lanjut ke langkah berikutnya di panduan ini.
 
 Masih error juga? Cek pengaturan BIOS. Ini tandanya "Virtualization" di komputer masih dimatikan dari pengaturan BIOS (pengaturan bawaan komputer, di luar Windows). Caranya:
 
 1. Restart komputer.
-2. Begitu layar pertama muncul (sebelum masuk Windows), tekan berulang-ulang salah satu tombol ini sesuai merk laptop/komputer kamu: **F2**, **F10**, **F12**, **Esc**, atau **Del**. (Dell biasanya F2, HP biasanya Esc/F10, Lenovo F1/F2, Asus/Acer F2/Del — kalau tidak yakin, coba satu-satu.)
+2. Begitu layar pertama muncul (sebelum masuk Windows), tekan berulang-ulang salah satu tombol ini sesuai merk laptop/komputer kamu: **F2**, **F10**, **F12**, **Esc**, atau **Del**. (Dell biasanya F2, HP biasanya Esc/F10, Lenovo F1/F2, Asus/Acer F2/Del. Kalau tidak yakin, coba satu-satu.)
 3. Nanti masuk ke layar biru/abu-abu bertuliskan **BIOS Setup** atau **UEFI**.
-4. Cari menu bernama **Advanced**, **CPU Configuration**, atau **Security** — di dalamnya cari opsi bernama salah satu dari ini: **Virtualization Technology**, **Intel VT-x**, **SVM Mode**, atau **AMD-V**.
+4. Cari menu bernama **Advanced**, **CPU Configuration**, atau **Security**. Di dalamnya cari opsi bernama salah satu dari ini: **Virtualization Technology**, **Intel VT-x**, **SVM Mode**, atau **AMD-V**.
 5. Ubah nilainya jadi **Enabled** (biasanya pakai tombol panah + Enter untuk pilih).
 6. Cari opsi **Save & Exit** (atau tekan **F10**), pilih **Yes**/**OK** untuk simpan dan restart.
 7. Komputer akan nyala normal ke Windows lagi. Buka Docker Desktop, coba lagi.
 
-Kalau sudah coba dua langkah di atas dan masih tetap error, baru itu saatnya minta bantuan tim teknis.
+Kalau sudah coba semua cara di atas dan masih tetap error, hubungi orang yang kasih aplikasi ini ke kamu.
 
 #### Kalau komputer kamu Mac
 
 1. Buka browser, ketik di kolom alamat: `docker.com` lalu Enter.
-2. Cari tombol **Download Docker Desktop**, klik, pilih versi **Mac** — perhatikan pilihan **Apple Chip** atau **Intel Chip** (kalau tidak tahu Mac kamu chip apa, cek lewat menu Apple logo di pojok kiri atas → **About This Mac**).
+2. Cari tombol **Download Docker Desktop**, klik, pilih versi **Mac**. Perhatikan pilihan **Apple Chip** atau **Intel Chip** (kalau tidak tahu Mac kamu chip apa, cek lewat menu Apple logo di pojok kiri atas → **About This Mac**).
 3. Buka file `.dmg` yang terdownload, lalu drag ikon Docker ke folder **Applications** sesuai instruksi di layar.
 4. Buka aplikasi **Docker** dari folder Applications (atau Launchpad).
 5. Kalau diminta izin/password Mac, masukkan password Mac kamu (ini normal, Docker butuh izin sistem).
@@ -78,7 +78,7 @@ Semua perintah di bawah ini harus dijalankan **di dalam folder aplikasi ini** (f
 
 Aplikasi ini butuh beberapa file/folder pelengkap yang **tidak ikut ter-download** karena alasan teknis. Cukup dilakukan **sekali saja** di komputer ini.
 
-Pertama, buka folder aplikasi ini (folder utama tempat kamu menyimpan/mengekstrak aplikasi ini — folder yang di dalamnya ada file `docker-compose.yml`, `Dockerfile`, folder `application`, dst). **Semua yang dibuat di bawah ini letaknya di dalam folder utama ini** (atau di dalam sub-foldernya, sesuai yang ditulis).
+Pertama, buka folder aplikasi ini (folder utama tempat kamu menyimpan/mengekstrak aplikasi ini, folder yang di dalamnya ada file `docker-compose.yml`, `Dockerfile`, folder `application`, dst). **Semua yang dibuat di bawah ini letaknya di dalam folder utama ini** (atau di dalam sub-foldernya, sesuai yang ditulis).
 
 Supaya lebih jelas, ini posisi setiap file/folder yang perlu dibuat (tulisan **← BUAT INI** menandai yang belum ada dan harus kamu buat):
 
@@ -96,7 +96,7 @@ alice/                              <- folder utama aplikasi ini
 
 **a. Buat file `php.ini`**
 
-Di dalam folder utama (`alice/`, sejajar dengan `docker-compose.yml`), buat file baru bernama persis `php.ini` (bukan `php.ini.txt` — kalau di Windows Notepad, saat Save As pilih "Save as type: All Files" supaya tidak otomatis ditambah `.txt`). Isi filenya dengan teks berikut (copy-paste apa adanya):
+Di dalam folder utama (`alice/`, sejajar dengan `docker-compose.yml`), buat file baru bernama persis `php.ini` (bukan `php.ini.txt`. Kalau di Windows Notepad, saat Save As pilih "Save as type: All Files" supaya tidak otomatis ditambah `.txt`). Isi filenya dengan teks berikut (copy-paste apa adanya):
 
 ```
 memory_limit = 256M
@@ -110,11 +110,11 @@ error_reporting = E_ALL & ~E_DEPRECATED & ~E_NOTICE
 
 **b. Buat 3 folder kosong berikut** (klik kanan → New Folder di File Explorer/Finder, tidak perlu diisi apa-apa di dalamnya):
 
-1. `exim` — dibuat **langsung di dalam folder utama** `alice/` (sejajar dengan `docker-compose.yml`).
-2. `uploads` — dibuat **langsung di dalam folder utama** `alice/` (sejajar dengan `docker-compose.yml`).
-3. `sessions` — dibuat **di dalam folder `application/cache/`**. Kalau folder `cache` di dalam `application` belum ada juga, buat dulu foldernya, baru di dalamnya buat folder `sessions`. Jadi urutannya: buka folder `application` → buka folder `cache` → di dalam situ buat folder baru bernama `sessions`.
+1. `exim`, dibuat **langsung di dalam folder utama** `alice/` (sejajar dengan `docker-compose.yml`).
+2. `uploads`, dibuat **langsung di dalam folder utama** `alice/` (sejajar dengan `docker-compose.yml`).
+3. `sessions`, dibuat **di dalam folder `application/cache/`**. Kalau folder `cache` di dalam `application` belum ada juga, buat dulu foldernya, baru di dalamnya buat folder `sessions`. Jadi urutannya: buka folder `application` → buka folder `cache` → di dalam situ buat folder baru bernama `sessions`.
 
-> Kalau nanti muncul error berwarna merah yang isinya ada kata **"Permission denied"** atau **"mkdir()"**, itu tandanya salah satu folder di atas belum ada, salah tempat, atau belum bisa ditulis. Cek ulang posisinya sesuai diagram di atas, atau minta bantuan tim teknis untuk dibantu set izin foldernya.
+> Kalau nanti muncul error berwarna merah yang isinya ada kata **"Permission denied"** atau **"mkdir()"**, itu tandanya salah satu folder di atas belum ada, salah tempat, atau belum bisa ditulis. Cek ulang posisinya sesuai diagram di atas.
 
 ---
 
@@ -138,21 +138,21 @@ Setelah langkah 1 selesai (cukup sekali), setiap mau pakai aplikasinya:
    http://localhost:8080
    ```
 
-5. Login dengan akun yang sudah diberikan tim teknis.
+5. Login pakai akun yang sudah kamu terima.
 
-**Aplikasi ini harus tetap dibuka lewat alamat di atas selama Docker Desktop menyala.** Kalau Docker Desktop ditutup, aplikasinya juga ikut berhenti — buka lagi Docker Desktop dan ulangi langkah 3 di atas untuk menyalakannya kembali.
+**Aplikasi ini harus tetap dibuka lewat alamat di atas selama Docker Desktop menyala.** Kalau Docker Desktop ditutup, aplikasinya juga ikut berhenti. Buka lagi Docker Desktop dan ulangi langkah 3 di atas untuk menyalakannya kembali.
 
 ---
 
 ## 3. Mematikan Aplikasi
 
-Kalau sudah selesai pakai dan ingin mematikan aplikasinya (opsional — boleh juga dibiarkan menyala), di Terminal ketik:
+Kalau sudah selesai pakai dan ingin mematikan aplikasinya (boleh juga dibiarkan menyala, ini opsional), di Terminal ketik:
 
 ```
 docker compose down
 ```
 
-Data yang sudah diimport/disimpan **tidak akan hilang** meski aplikasi dimatikan — data baru hilang kalau ada perintah khusus yang sengaja menghapusnya (di luar cakupan panduan ini).
+Data yang sudah diimport/disimpan **tidak akan hilang** meski aplikasi dimatikan. Data baru hilang kalau ada perintah khusus yang sengaja menghapusnya, di luar cakupan panduan ini.
 
 ---
 
@@ -162,7 +162,7 @@ Kalau ini benar-benar pemasangan baru di komputer baru, database-nya masih **kos
 
 Import ini bisa dilakukan sendiri lewat browser (tidak perlu command line), pakai tools bawaan bernama **phpMyAdmin** yang sudah disiapkan bareng aplikasi ini.
 
-1. Pastikan aplikasi sudah dinyalakan dulu (lihat bagian **2. Menjalankan Aplikasi** di atas — `docker compose up -d`).
+1. Pastikan aplikasi sudah dinyalakan dulu (lihat bagian **2. Menjalankan Aplikasi** di atas, `docker compose up -d`).
 2. Buka browser, kunjungi alamat:
 
    ```
@@ -178,11 +178,11 @@ Import ini bisa dilakukan sendiri lewat browser (tidak perlu command line), paka
 5. Di bagian atas halaman, klik tab **Import**.
 6. Klik **Choose File** (atau **Browse**), pilih file `.sql` backup database yang sudah kamu punya.
 7. Scroll ke bawah, klik tombol **Go** / **Import** di paling bawah halaman.
-8. Tunggu sampai muncul kotak hijau bertuliskan **"Import has been successfully finished"**. Kalau file-nya besar, ini bisa makan waktu beberapa menit — jangan tutup/refresh halaman sebelum selesai.
+8. Tunggu sampai muncul kotak hijau bertuliskan **"Import has been successfully finished"**. Kalau file-nya besar, ini bisa makan waktu beberapa menit. Jangan tutup/refresh halaman sebelum selesai.
 
-> **Kalau muncul pesan error soal ukuran file terlalu besar**, beri tahu tim teknis untuk menaikkan batas ukuran upload-nya.
+> **Kalau muncul pesan error soal ukuran file terlalu besar**, hubungi orang yang kasih aplikasi ini ke kamu untuk dibantu naikkan batas ukuran upload-nya.
 
-> phpMyAdmin ini adalah tools untuk mengelola database secara langsung — cukup hati-hati, jangan sembarangan klik menu lain selain **Import** kecuali diarahkan tim teknis, karena ada menu yang bisa **menghapus data**.
+> phpMyAdmin ini adalah tools untuk mengelola database secara langsung. Hati-hati, jangan sembarangan klik menu lain selain **Import**, karena ada menu yang bisa **menghapus data**.
 
 ---
 
@@ -190,14 +190,14 @@ Import ini bisa dilakukan sendiri lewat browser (tidak perlu command line), paka
 
 | Yang terlihat | Kemungkinan penyebab | Yang harus dilakukan |
 |---|---|---|
-| Halaman putih kosong setelah klik tombol tertentu | Biasanya bukan aplikasi rusak, tapi memang tidak ada yang ditampilkan di halaman itu | Tekan tombol "Back" di browser, coba ulangi. Kalau sering terjadi, beri tahu tim teknis |
-| Tulisan merah "A PHP Error was encountered" muncul di atas halaman | Ada bug di aplikasi | Screenshot semuanya (jangan sebagian), kirim ke tim teknis |
-| "Permission denied" / "mkdir()" | Folder pelengkap (lihat langkah 1.3) belum dibuat atau izinnya salah | Cek ulang langkah 1.3, atau minta bantuan tim teknis |
-| Import file `.cba` gagal / macet setelah file kedua | Biasanya karena percobaan import sebelumnya gagal di tengah jalan | Coba import ulang file yang sama. Kalau tetap gagal, screenshot error-nya dan kirim ke tim teknis |
+| Halaman putih kosong setelah klik tombol tertentu | Biasanya bukan aplikasi rusak, tapi memang tidak ada yang ditampilkan di halaman itu | Tekan tombol "Back" di browser, coba ulangi |
+| Tulisan merah "A PHP Error was encountered" muncul di atas halaman | Ada bug di aplikasi | Screenshot semuanya (jangan sebagian), kirim ke orang yang kasih aplikasi ini ke kamu |
+| "Permission denied" / "mkdir()" | Folder pelengkap (lihat langkah 1.3) belum dibuat atau izinnya salah | Cek ulang langkah 1.3 |
+| Import file `.cba` gagal / macet setelah file kedua | Biasanya karena percobaan import sebelumnya gagal di tengah jalan | Coba import ulang file yang sama. Kalau tetap gagal, screenshot error-nya dan kirim ke orang yang kasih aplikasi ini ke kamu |
 | Browser bilang "This site can't be reached" di `localhost:8080` | Docker Desktop belum menyala, atau aplikasinya belum dijalankan | Buka Docker Desktop, lalu ulangi langkah 2 |
-| Setelah ganti komputer / install ulang, semua data hilang | Data tersimpan di komputer lama, tidak otomatis pindah | Perlu bawa file backup database dari komputer lama, minta bantuan tim teknis untuk pindahkan |
+| Setelah ganti komputer / install ulang, semua data hilang | Data tersimpan di komputer lama, tidak otomatis pindah | Bawa file backup database dari komputer lama, lalu ulangi bagian 4 di komputer baru |
 
-**Kalau ragu atau error yang muncul tidak ada di tabel ini, jangan coba klik-klik sembarangan** — screenshot dulu semua pesan errornya (termasuk yang berwarna merah paling bawah), lalu kirim ke tim teknis.
+**Kalau ragu atau error yang muncul tidak ada di tabel ini, jangan coba klik-klik sembarangan.** Screenshot dulu semua pesan errornya (termasuk yang berwarna merah paling bawah), lalu kirim ke orang yang kasih aplikasi ini ke kamu.
 
 ---
 
@@ -206,5 +206,5 @@ Import ini bisa dilakukan sendiri lewat browser (tidak perlu command line), paka
 - **Docker** = program yang "membungkus" aplikasi ini supaya bisa jalan tanpa perlu install macam-macam software satu-satu.
 - **localhost:8080** = alamat aplikasi utama (CBA UKP Center) di browser, cuma bisa dibuka dari komputer yang sama tempat Docker-nya jalan.
 - **localhost:8081** = alamat **phpMyAdmin**, dipakai khusus untuk import file `.sql` database (lihat bagian 4).
-- **Import** = memasukkan data ke dalam aplikasi — bisa file `.cba` (hasil ujian, lewat aplikasi utama) atau file `.sql` (database, lewat phpMyAdmin).
+- **Import** = memasukkan data ke dalam aplikasi, bisa file `.cba` (hasil ujian, lewat aplikasi utama) atau file `.sql` (database, lewat phpMyAdmin).
 - **Export** = mengambil/mengunduh data dari aplikasi jadi sebuah file (`.cba`/`.zip`).
