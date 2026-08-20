@@ -2995,6 +2995,10 @@ class Report extends CI_COntroller {
 		$this->period_participant_m->empty_temp();
 		$this->participant_m->empty_temp();
 		$this->participant_master_m->empty_temp();
+		$this->exam_attempt_m->empty_temp();
+		$this->exam_attempt_competency_m->empty_temp();
+		$this->score_m->empty_temp();
+		$this->status_m->empty_temp();
 		
 
 		// Read in entire file
