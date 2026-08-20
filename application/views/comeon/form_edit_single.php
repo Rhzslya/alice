@@ -9,6 +9,7 @@
 			<input type="hidden" name="f_exam_attempt" value="<?=$row_score->uc_exam_attempt?>">
 			<input type="hidden" name="f_competency" value="<?=$row_score->uc_competency?>">
 			<input type="hidden" name="f_old_score" value="<?=decryptIt($row_score->score_normal)?>">
+			<input type="hidden" name="f_back_url" value="<?=$back_url?>">
 			<input type="text" name="f_new_score" value="<?=decryptIt($row_score->score_normal)?>" size="3" >
 			<input type="submit" value="Update">
 		<?=form_close()?>
