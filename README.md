@@ -2,6 +2,44 @@
 
 ---
 
+## 0. Download Aplikasi Ini
+
+Kalau folder aplikasi ini belum ada di komputer kamu, ambil dulu dari GitHub. Ada 2 cara.
+
+### Cara termudah: download ZIP
+
+1. Buka `https://github.com/Rhzslya/alice` di browser.
+2. Klik tombol hijau **Code**.
+3. Klik **Download ZIP**.
+4. Buka file ZIP yang terdownload, extract ke tempat yang kamu mau (misal ke Desktop).
+5. Folder hasil extract itu adalah folder aplikasi ini. Semua langkah di panduan ini merujuk ke folder tersebut.
+
+Kalau nanti ada update dari GitHub, ulangi cara ini lagi (download ZIP baru, timpa foldernya).
+
+### Cara pakai Git (lebih ribet, tapi update-nya lebih gampang)
+
+1. Install **Git** dulu: buka browser, ketik `git-scm.com`, download versi sesuai komputermu (Windows/Mac), install seperti biasa (klik Next/OK terus).
+2. Buka Terminal (Command Prompt/PowerShell di Windows, Terminal di Mac), lalu masuk ke folder tempat kamu mau simpan aplikasinya, misal:
+
+   ```
+   cd Desktop
+   ```
+
+3. Ketik:
+
+   ```
+   git clone https://github.com/Rhzslya/alice.git
+   ```
+
+4. Setelah selesai, akan muncul folder baru bernama `alice` di situ, isinya aplikasi ini.
+5. Kalau nanti ada update dan mau ambil versi terbaru, buka Terminal di dalam folder `alice`, lalu ketik:
+
+   ```
+   git pull
+   ```
+
+---
+
 ## 1. Yang Perlu Disiapkan Sekali Saja di Awal
 
 ### 1.1 Install Docker Desktop
