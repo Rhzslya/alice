@@ -134,7 +134,31 @@ Data yang sudah diimport/disimpan **tidak akan hilang** meski aplikasi dimatikan
 
 ## 4. Isi Data Awal (Database)
 
-Kalau ini benar-benar pemasangan baru di komputer baru, database-nya masih **kosong** (belum ada data nilai/peserta sama sekali). Perlu di-import dulu satu kali dari file backup database (file `.sql`) yang disiapkan tim teknis. Minta tim teknis untuk membantu proses import ini — biasanya cukup dilakukan sekali di awal.
+Kalau ini benar-benar pemasangan baru di komputer baru, database-nya masih **kosong** (belum ada data nilai/peserta sama sekali). Perlu di-import dulu satu kali dari file backup database (file `.sql`).
+
+Import ini bisa dilakukan sendiri lewat browser (tidak perlu command line), pakai tools bawaan bernama **phpMyAdmin** yang sudah disiapkan bareng aplikasi ini.
+
+1. Pastikan aplikasi sudah dinyalakan dulu (lihat bagian **2. Menjalankan Aplikasi** di atas — `docker compose up -d`).
+2. Buka browser, kunjungi alamat:
+
+   ```
+   http://localhost:8081
+   ```
+
+3. Di halaman login phpMyAdmin, isi:
+   - **Username:** `root`
+   - **Password:** (kosongkan saja, tidak usah diisi)
+
+   Lalu klik **Go** / **Login**.
+4. Di panel sebelah kiri, klik nama database **`cba_ukp_center`**.
+5. Di bagian atas halaman, klik tab **Import**.
+6. Klik **Choose File** (atau **Browse**), pilih file `.sql` backup database yang sudah kamu punya.
+7. Scroll ke bawah, klik tombol **Go** / **Import** di paling bawah halaman.
+8. Tunggu sampai muncul kotak hijau bertuliskan **"Import has been successfully finished"**. Kalau file-nya besar, ini bisa makan waktu beberapa menit — jangan tutup/refresh halaman sebelum selesai.
+
+> **Kalau muncul pesan error soal ukuran file terlalu besar**, beri tahu tim teknis untuk menaikkan batas ukuran upload-nya.
+
+> phpMyAdmin ini adalah tools untuk mengelola database secara langsung — cukup hati-hati, jangan sembarangan klik menu lain selain **Import** kecuali diarahkan tim teknis, karena ada menu yang bisa **menghapus data**.
 
 ---
 
@@ -156,6 +180,7 @@ Kalau ini benar-benar pemasangan baru di komputer baru, database-nya masih **kos
 ## 6. Istilah Singkat
 
 - **Docker** = program yang "membungkus" aplikasi ini supaya bisa jalan tanpa perlu install macam-macam software satu-satu.
-- **localhost:8080** = alamat aplikasi ini di browser, cuma bisa dibuka dari komputer yang sama tempat Docker-nya jalan.
-- **Import** = memasukkan hasil ujian (file `.cba`) ke dalam aplikasi.
+- **localhost:8080** = alamat aplikasi utama (CBA UKP Center) di browser, cuma bisa dibuka dari komputer yang sama tempat Docker-nya jalan.
+- **localhost:8081** = alamat **phpMyAdmin**, dipakai khusus untuk import file `.sql` database (lihat bagian 4).
+- **Import** = memasukkan data ke dalam aplikasi — bisa file `.cba` (hasil ujian, lewat aplikasi utama) atau file `.sql` (database, lewat phpMyAdmin).
 - **Export** = mengambil/mengunduh data dari aplikasi jadi sebuah file (`.cba`/`.zip`).

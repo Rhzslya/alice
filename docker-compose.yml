@@ -28,5 +28,17 @@ services:
       - db_data:/var/lib/mysql
     restart: unless-stopped
 
+  phpmyadmin:
+    image: phpmyadmin:5
+    container_name: ci3_legacy_phpmyadmin
+    environment:
+      PMA_HOST: db
+      UPLOAD_LIMIT: 128M
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+    depends_on:
+      - db
+
 volumes:
   db_data:
