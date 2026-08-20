@@ -383,7 +383,8 @@ class Comeon extends CI_Controller{
 				$this->upload->initialize($config);
 
 				if ( ! $this->upload->do_upload('f_file')) {
-					$this->upload->display_errors(); 	
+					echo "Upload Error: " . $this->upload->display_errors('', '');
+					return;
 				}
 				else {
 					$upload_data	= $this->upload->data(); //Returns array of containing all of the data related to the file you uploaded.
