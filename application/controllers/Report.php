@@ -3011,6 +3011,14 @@ class Report extends CI_COntroller {
         // Nonaktifkan pelaporan error database CodeIgniter sementara agar tidak fatal/stop
         $this->db->db_debug = FALSE;
 
+        // Data lama dari file .cba sering berisi tanggal '0000-00-00' / datetime kosong ''.
+        // MySQL strict mode (NO_ZERO_DATE / STRICT_TRANS_TABLES) menolak nilai itu dan
+        // membuat query INSERT gagal TOTAL secara senyap (lihat @ di bawah), sehingga
+        // tabel seperti tech_participant_temp / tech_period_participant_temp bisa kosong
+        // tanpa error yang terlihat. Longgarkan dulu untuk proses import ini.
+        $original_sql_mode = $this->db->query("SELECT @@sql_mode AS mode")->row()->mode;
+        $this->db->query("SET SESSION sql_mode = ''");
+
         $templine = '';
         foreach ($de_lines as $line) {
             $trimmed_line = trim($line);
@@ -3728,6 +3736,9 @@ class Report extends CI_COntroller {
 		$this->status_m->empty_temp();
 
 		// END CATEFORY REPORT ANSWER
+
+		// Kembalikan sql_mode ke kondisi semula
+		$this->db->query("SET SESSION sql_mode = '".$original_sql_mode."'");
 
 		//Delete File Update
 		unlink("./exim/".$file_name);

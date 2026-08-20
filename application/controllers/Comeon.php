@@ -1023,7 +1023,7 @@ class Comeon extends CI_Controller{
 			//	Generate query for status
 			//	Get All Competency from table status WHERE competency in Period
 			$q_status = "";
-			if (isset($sta_com_ucs)) {
+			if (isset($sta_com_ucs) && isset($uc_per) && $uc_per !== "") {
 				$this->load->model('status_m');
 
 				$query = $this->status_m->get_participant_competency($per_ucs, $uc_per);	// $uc_per = (all seafarer in this period in come separtation)
