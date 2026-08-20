@@ -3499,7 +3499,7 @@ class Report extends CI_COntroller {
 				$seafarer_code  .= "".$res->seafarer_code.",";
 				$score_normal  	.= "".$res->score_normal.",";
 
-				$uc_diklat_par   = $nono[$res->seafarer_code]['uc_diklat_participant'];
+				$uc_diklat_par   = isset($nono[$res->seafarer_code]) ? $nono[$res->seafarer_code]['uc_diklat_participant'] : NULL;
 
 				$value .= "('".$res->uc."', '".$res->uc_exam_attempt."', '".$res->uc_competency."', '".$res->seafarer_code."', '".$res->score."', '".$res->score_2."', '".$res->score_normal."'),";
 				
