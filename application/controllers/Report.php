@@ -3323,8 +3323,9 @@ class Report extends CI_COntroller {
 		///	Get in Temp
 		$query = $this->period_participant_m->temp_not_in_real();
 		$value = NULL;
+		$nono = array();
 
-		$i = 1;	
+		$i = 1;
 		if ($query->num_rows() > 0){
 			$field = "(`uc`, `uc_period`, `uc_diklat_participant`, `seafarer_code`, `participant_no`, `last_active`, `is_login`)";
 
