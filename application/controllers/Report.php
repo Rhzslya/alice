@@ -3500,10 +3500,11 @@ class Report extends CI_COntroller {
 				$score_normal  	.= "".$res->score_normal.",";
 
 				$uc_diklat_par   = isset($nono[$res->seafarer_code]) ? $nono[$res->seafarer_code]['uc_diklat_participant'] : NULL;
+				$pra_pasca       = ($res->diklat_type === NULL || $res->diklat_type === '') ? 0 : $res->diklat_type;
 
 				$value .= "('".$res->uc."', '".$res->uc_exam_attempt."', '".$res->uc_competency."', '".$res->seafarer_code."', '".$res->score."', '".$res->score_2."', '".$res->score_normal."'),";
-				
-				$value_score .= "('".$res->uc."', '".$res->uc_period."', '".$res->uc_upt."', '".$res->uc_competency."', '".$res->uc."', '".$res->diklat_type."', '".$uc_diklat_par."','".$res->seafarer_code."', '".$res->score_normal."'),";
+
+				$value_score .= "('".$res->uc."', '".$res->uc_period."', '".$res->uc_upt."', '".$res->uc_competency."', '".$res->uc."', '".$pra_pasca."', '".$uc_diklat_par."','".$res->seafarer_code."', '".$res->score_normal."'),";
 
 				if (($i%50) == 0){
 					// CATEGORY ATTEMPT ANSWER PADA SAAT FORM IMPORT
