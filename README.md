@@ -12,11 +12,36 @@ Panduan ini ditulis untuk siapa saja yang **tidak paham coding sama sekali** —
 
 ### 1.1 Install Docker Desktop
 
-Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menjalankan aplikasinya, kamu tidak perlu install PHP atau MySQL secara manual.
+Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menjalankan aplikasinya, kamu tidak perlu install PHP atau MySQL secara manual. Ini instalasi biasa seperti install aplikasi lain, cuma ada beberapa langkah tambahan — ikuti persis.
 
-1. Download dan install **Docker Desktop** (cari "Docker Desktop" di Google, pilih sesuai sistem operasimu — Windows/Mac).
-2. Setelah terinstall, buka Docker Desktop dan tunggu sampai statusnya "Running" (biasanya ada ikon paus 🐳 di taskbar/menu bar).
-3. Biarkan Docker Desktop tetap terbuka/jalan setiap kali mau pakai aplikasi ini.
+#### Kalau komputer kamu Windows
+
+1. Buka browser, ketik di kolom alamat (bukan kolom pencarian Google): `docker.com` lalu Enter.
+2. Cari tombol **Download Docker Desktop**, klik, pilih versi **Windows**.
+3. Setelah file `Docker Desktop Installer.exe` selesai terdownload, buka/klik dua kali file itu.
+4. Ikuti saja instruksi di layar, klik **Next**/**OK** terus sampai selesai. Kalau muncul pilihan/centangan yang tidak dimengerti, biarkan saja default-nya (jangan diubah-ubah), lalu lanjut.
+5. Kalau muncul kotak dialog soal **WSL 2** (Windows Subsystem for Linux), ikuti link/tombol yang disediakan installer untuk install itu juga — biasanya installer akan memandu otomatis, atau minta restart komputer dulu.
+6. Setelah instalasi selesai, **restart komputer**.
+7. Setelah komputer nyala lagi, buka **Docker Desktop** dari Start Menu.
+8. Kalau diminta buat akun/login Docker, boleh dilewati (pilih "Skip" atau "Continue without signing in" kalau ada) — tidak wajib untuk pemakaian ini.
+9. Tunggu sampai muncul tulisan **"Docker Desktop is running"** atau ikon paus 🐳 di pojok kanan bawah (system tray) sudah tidak lagi loading/berputar.
+
+> **Kalau muncul error soal "virtualization is not enabled" atau "Hyper-V"**: ini artinya ada pengaturan khusus di komputer (BIOS) yang perlu diaktifkan dulu, biasanya oleh IT/teknisi komputer. Ini di luar cakupan panduan ini — minta bantuan tim teknis.
+
+#### Kalau komputer kamu Mac
+
+1. Buka browser, ketik di kolom alamat: `docker.com` lalu Enter.
+2. Cari tombol **Download Docker Desktop**, klik, pilih versi **Mac** — perhatikan pilihan **Apple Chip** atau **Intel Chip** (kalau tidak tahu Mac kamu chip apa, cek lewat menu Apple logo di pojok kiri atas → **About This Mac**).
+3. Buka file `.dmg` yang terdownload, lalu drag ikon Docker ke folder **Applications** sesuai instruksi di layar.
+4. Buka aplikasi **Docker** dari folder Applications (atau Launchpad).
+5. Kalau diminta izin/password Mac, masukkan password Mac kamu (ini normal, Docker butuh izin sistem).
+6. Kalau diminta buat akun/login Docker, boleh dilewati.
+7. Tunggu sampai ikon paus 🐳 di menu bar atas sudah tidak loading lagi.
+
+#### Setelah Docker Desktop terinstall
+
+- **Setiap kali mau pakai aplikasi ini, buka dulu Docker Desktop dan tunggu sampai ikon paus-nya siap (tidak loading).** Baru lanjut ke langkah-langkah berikutnya.
+- Docker Desktop boleh dibiarkan terbuka terus di background selama komputer menyala.
 
 ### 1.2 Buka Folder Aplikasi di Terminal
 
@@ -29,9 +54,25 @@ Semua perintah di bawah ini harus dijalankan **di dalam folder aplikasi ini** (f
 
 Aplikasi ini butuh beberapa file/folder pelengkap yang **tidak ikut ter-download** karena alasan teknis. Cukup dilakukan **sekali saja** di komputer ini.
 
+Pertama, buka folder aplikasi ini (folder utama tempat kamu menyimpan/mengekstrak aplikasi ini — folder yang di dalamnya ada file `docker-compose.yml`, `Dockerfile`, folder `application`, dst). **Semua yang dibuat di bawah ini letaknya di dalam folder utama ini** (atau di dalam sub-foldernya, sesuai yang ditulis).
+
+Supaya lebih jelas, ini posisi setiap file/folder yang perlu dibuat (tulisan **← BUAT INI** menandai yang belum ada dan harus kamu buat):
+
+```
+alice/                              <- folder utama aplikasi ini
+├── docker-compose.yml              (sudah ada)
+├── Dockerfile                      (sudah ada)
+├── php.ini                         <- BUAT FILE INI (langkah a)
+├── exim/                           <- BUAT FOLDER INI (langkah b)
+├── uploads/                        <- BUAT FOLDER INI (langkah b)
+└── application/
+    └── cache/
+        └── sessions/               <- BUAT FOLDER INI (langkah b, di dalam application/cache/)
+```
+
 **a. Buat file `php.ini`**
 
-Buat file baru bernama `php.ini` (persis di folder aplikasi ini, sejajar dengan `docker-compose.yml`), isi dengan teks berikut (copy-paste apa adanya):
+Di dalam folder utama (`alice/`, sejajar dengan `docker-compose.yml`), buat file baru bernama persis `php.ini` (bukan `php.ini.txt` — kalau di Windows Notepad, saat Save As pilih "Save as type: All Files" supaya tidak otomatis ditambah `.txt`). Isi filenya dengan teks berikut (copy-paste apa adanya):
 
 ```
 memory_limit = 256M
@@ -43,13 +84,13 @@ display_errors = On
 error_reporting = E_ALL & ~E_DEPRECATED & ~E_NOTICE
 ```
 
-**b. Buat folder-folder kosong berikut** (buat folder biasa lewat File Explorer/Finder, tidak perlu isi apa-apa di dalamnya):
+**b. Buat 3 folder kosong berikut** (klik kanan → New Folder di File Explorer/Finder, tidak perlu diisi apa-apa di dalamnya):
 
-- `application/cache/sessions`
-- `exim`
-- `uploads`
+1. `exim` — dibuat **langsung di dalam folder utama** `alice/` (sejajar dengan `docker-compose.yml`).
+2. `uploads` — dibuat **langsung di dalam folder utama** `alice/` (sejajar dengan `docker-compose.yml`).
+3. `sessions` — dibuat **di dalam folder `application/cache/`**. Kalau folder `cache` di dalam `application` belum ada juga, buat dulu foldernya, baru di dalamnya buat folder `sessions`. Jadi urutannya: buka folder `application` → buka folder `cache` → di dalam situ buat folder baru bernama `sessions`.
 
-> Kalau nanti muncul error berwarna merah yang isinya ada kata **"Permission denied"** atau **"mkdir()"**, itu tandanya salah satu folder ini belum ada atau belum bisa ditulis. Beri tahu tim teknis untuk dibantu set izin foldernya.
+> Kalau nanti muncul error berwarna merah yang isinya ada kata **"Permission denied"** atau **"mkdir()"**, itu tandanya salah satu folder di atas belum ada, salah tempat, atau belum bisa ditulis. Cek ulang posisinya sesuai diagram di atas, atau minta bantuan tim teknis untuk dibantu set izin foldernya.
 
 ---
 
