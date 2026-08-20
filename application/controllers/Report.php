@@ -1832,8 +1832,9 @@ class Report extends CI_COntroller {
 
 	function detail_exam_student($uc_exam = NULL, $session = NULL, $att_uc = NULL){
 		if ($att_uc != NULL) {
-		
+
 			$data = "";
+			$data['max_question'] = 0;
 
 			$this->load->model('exam_attempt_m');
 			$query = $this->exam_attempt_m->get_by_user($att_uc);
@@ -1964,8 +1965,9 @@ class Report extends CI_COntroller {
 
 	function detail_exam_student_pdf($uc_exam = NULL, $session = NULL, $att_uc = NULL){
 		if ($att_uc != NULL) {
-		
+
 			$data = "";
+			$data['max_question'] = 0;
 
 			$this->load->model('exam_attempt_m');
 			$query = $this->exam_attempt_m->get_by_user($att_uc);
@@ -5001,6 +5003,7 @@ public function upload(){
 	function show_answer($uc_period = NULL , $uc_competency = NULL , $uc_exam_attempt =  NULL){
 		if ($uc_exam_attempt != NULL) {
 			$data = "" ;
+			$data['max_question'] = 0;
 			$competency = "" ;
 			$quest = "" ;
 
@@ -5334,6 +5337,7 @@ public function upload(){
 	function report_by_answer_pdf($uc_period = NULL , $uc_competency = NULL , $uc_exam_attempt =  NULL){
 		if ($uc_exam_attempt != NULL) {
 			$data = "" ;
+			$data['max_question'] = 0;
 			$competency = "" ;
 			$quest = "" ;
 
