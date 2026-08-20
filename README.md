@@ -1,10 +1,10 @@
 # Aplikasi CBA UKP Center (Alice)
 
-Aplikasi ini dipakai untuk mengelola data Ujian Kenaikan Pangkat (UKP) — mulai dari import hasil ujian, rekap nilai, sampai export data harian.
+Aplikasi buat kelola data Ujian Kenaikan Pangkat (UKP): import hasil ujian, rekap nilai, export data harian.
 
-**Aplikasi ini hanya berjalan di komputer lokal (offline), tidak online/bisa diakses dari internet.** Semua data tersimpan di komputer tempat aplikasi ini dijalankan.
+Jalan cuma di komputer lokal, tidak online. Data tersimpan di komputer tempat aplikasi ini dijalankan.
 
-Panduan ini ditulis untuk siapa saja yang **tidak paham coding sama sekali** — cukup ikuti langkah-langkahnya persis seperti yang tertulis.
+Ikuti langkah di bawah urut dari atas, tidak perlu paham coding.
 
 ---
 
@@ -26,7 +26,41 @@ Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menj
 8. Kalau diminta buat akun/login Docker, boleh dilewati (pilih "Skip" atau "Continue without signing in" kalau ada) — tidak wajib untuk pemakaian ini.
 9. Tunggu sampai muncul tulisan **"Docker Desktop is running"** atau ikon paus 🐳 di pojok kanan bawah (system tray) sudah tidak lagi loading/berputar.
 
-> **Kalau muncul error soal "virtualization is not enabled" atau "Hyper-V"**: ini artinya ada pengaturan khusus di komputer (BIOS) yang perlu diaktifkan dulu, biasanya oleh IT/teknisi komputer. Ini di luar cakupan panduan ini — minta bantuan tim teknis.
+#### Kalau muncul error "virtualization is not enabled" / "Hyper-V" / "WSL"
+
+Ini artinya ada fitur di Windows yang belum aktif. Bisa dibenerin sendiri, ikuti urutan berikut:
+
+**Langkah 1 — Aktifkan fitur Windows-nya**
+
+1. Klik **Start**, ketik `Turn Windows features on or off`, buka aplikasinya.
+2. Cari dan **centang** dua ini:
+   - **Virtual Machine Platform**
+   - **Windows Subsystem for Linux**
+3. Klik **OK**, tunggu prosesnya selesai, lalu **restart komputer** saat diminta.
+4. Setelah nyala lagi, buka **Command Prompt** atau **PowerShell** (klik Start, ketik `cmd`, klik kanan → **Run as administrator**).
+5. Ketik perintah berikut, lalu Enter:
+
+   ```
+   wsl --update
+   ```
+
+6. Tunggu sampai selesai, lalu buka **Docker Desktop** lagi.
+
+Kalau Docker Desktop sekarang sudah bisa jalan normal, selesai — lanjut ke langkah berikutnya di panduan ini.
+
+**Langkah 2 — Kalau masih error juga, cek pengaturan BIOS**
+
+Ini tandanya "Virtualization" di komputer masih dimatikan dari pengaturan BIOS (pengaturan bawaan komputer, di luar Windows). Caranya:
+
+1. Restart komputer.
+2. Begitu layar pertama muncul (sebelum masuk Windows), tekan berulang-ulang salah satu tombol ini sesuai merk laptop/komputer kamu: **F2**, **F10**, **F12**, **Esc**, atau **Del**. (Dell biasanya F2, HP biasanya Esc/F10, Lenovo F1/F2, Asus/Acer F2/Del — kalau tidak yakin, coba satu-satu.)
+3. Nanti masuk ke layar biru/abu-abu bertuliskan **BIOS Setup** atau **UEFI**.
+4. Cari menu bernama **Advanced**, **CPU Configuration**, atau **Security** — di dalamnya cari opsi bernama salah satu dari ini: **Virtualization Technology**, **Intel VT-x**, **SVM Mode**, atau **AMD-V**.
+5. Ubah nilainya jadi **Enabled** (biasanya pakai tombol panah + Enter untuk pilih).
+6. Cari opsi **Save & Exit** (atau tekan **F10**), pilih **Yes**/**OK** untuk simpan dan restart.
+7. Komputer akan nyala normal ke Windows lagi. Buka Docker Desktop, coba lagi.
+
+Kalau sudah coba dua langkah di atas dan masih tetap error, baru itu saatnya minta bantuan tim teknis.
 
 #### Kalau komputer kamu Mac
 
