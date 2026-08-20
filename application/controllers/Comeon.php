@@ -44,6 +44,7 @@ class Comeon extends CI_Controller{
 			//echo "<br /> SCORE : ".decryptIt($row_score->score_normal);
 
 			$data['row_score'] 		= $row_score;
+			$data['back_url']			= $this->input->server('HTTP_REFERER');
 
 			$this->im_render->main('comeon/form_edit_single', $data);
 		}
@@ -53,6 +54,11 @@ class Comeon extends CI_Controller{
 	}
 
 	function update_single() {
+		$back_url = $this->input->post('f_back_url');
+		if (empty($back_url)) {
+			$back_url = site_url('report');
+		}
+
 		if ($this->input->post('f_new_score') > $this->input->post('f_old_score')) {
 			$uc_exam_attempt 	= $this->input->post('f_exam_attempt');
 			$uc_competency 		= $this->input->post('f_competency');
@@ -67,13 +73,17 @@ class Comeon extends CI_Controller{
 			$query = $this->exam_attempt_competency_m->get_filtered($filter);
 			if ($query->num_rows() > 0) {
 				$row = $query->row();
-			}
 
-			$this->do_update($row->seafarer_code, $row->uc_competency, $row->uc_exam_attempt, $this->input->post('f_old_score'), $this->input->post('f_new_score'));
+				$this->do_update($row->seafarer_code, $row->uc_competency, $row->uc_exam_attempt, $this->input->post('f_old_score'), $this->input->post('f_new_score'));
+
+				$this->session->set_flashdata('msg', 'Score updated!');
+			}
 		}
 		else {
-			echo "Nothing to change!";
+			$this->session->set_flashdata('msg', 'Nothing to change!');
 		}
+
+		redirect($back_url);
 	}
 
 	function do_update($seafarer_code = NULL, $uc_competency = NULL, $uc_exam_attempt = NULL, $old_score = NULL, $new_score = NULL) {
@@ -373,7 +383,8 @@ class Comeon extends CI_Controller{
 				$this->upload->initialize($config);
 
 				if ( ! $this->upload->do_upload('f_file')) {
-					$this->upload->display_errors(); 	
+					echo "Upload Error: " . $this->upload->display_errors('', '');
+					return;
 				}
 				else {
 					$upload_data	= $this->upload->data(); //Returns array of containing all of the data related to the file you uploaded.
@@ -1023,7 +1034,7 @@ class Comeon extends CI_Controller{
 			//	Generate query for status
 			//	Get All Competency from table status WHERE competency in Period
 			$q_status = "";
-			if (isset($sta_com_ucs)) {
+			if (isset($sta_com_ucs) && isset($uc_per) && $uc_per !== "") {
 				$this->load->model('status_m');
 
 				$query = $this->status_m->get_participant_competency($per_ucs, $uc_per);	// $uc_per = (all seafarer in this period in come separtation)
