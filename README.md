@@ -1,11 +1,5 @@
 # Aplikasi CBA UKP Center (Alice)
 
-Aplikasi buat kelola data Ujian Kenaikan Pangkat (UKP): import hasil ujian, rekap nilai, export data harian.
-
-Jalan cuma di komputer lokal, tidak online. Data tersimpan di komputer tempat aplikasi ini dijalankan.
-
-Ikuti langkah di bawah urut dari atas, tidak perlu paham coding.
-
 ---
 
 ## 1. Yang Perlu Disiapkan Sekali Saja di Awal
@@ -28,9 +22,7 @@ Aplikasi ini "dikemas" pakai program bernama **Docker**. Docker inilah yang menj
 
 #### Kalau muncul error "virtualization is not enabled" / "Hyper-V" / "WSL"
 
-Ini artinya ada fitur di Windows yang belum aktif. Bisa dibenerin sendiri, ikuti urutan berikut:
-
-**Langkah 1 — Aktifkan fitur Windows-nya**
+Ini artinya ada fitur di Windows yang belum aktif. Bisa dibenerin sendiri:
 
 1. Klik **Start**, ketik `Turn Windows features on or off`, buka aplikasinya.
 2. Cari dan **centang** dua ini:
@@ -48,9 +40,7 @@ Ini artinya ada fitur di Windows yang belum aktif. Bisa dibenerin sendiri, ikuti
 
 Kalau Docker Desktop sekarang sudah bisa jalan normal, selesai — lanjut ke langkah berikutnya di panduan ini.
 
-**Langkah 2 — Kalau masih error juga, cek pengaturan BIOS**
-
-Ini tandanya "Virtualization" di komputer masih dimatikan dari pengaturan BIOS (pengaturan bawaan komputer, di luar Windows). Caranya:
+Masih error juga? Cek pengaturan BIOS. Ini tandanya "Virtualization" di komputer masih dimatikan dari pengaturan BIOS (pengaturan bawaan komputer, di luar Windows). Caranya:
 
 1. Restart komputer.
 2. Begitu layar pertama muncul (sebelum masuk Windows), tekan berulang-ulang salah satu tombol ini sesuai merk laptop/komputer kamu: **F2**, **F10**, **F12**, **Esc**, atau **Del**. (Dell biasanya F2, HP biasanya Esc/F10, Lenovo F1/F2, Asus/Acer F2/Del — kalau tidak yakin, coba satu-satu.)
